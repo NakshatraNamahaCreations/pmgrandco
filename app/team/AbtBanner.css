@@ -1,4 +1,4 @@
-.about-hero {
+/* .about-hero {
   position: relative;
   width: 100%;
   min-height: 420px;
@@ -22,9 +22,9 @@
   z-index: 1;
 } */
 
-.about-hero-content {
+/* .about-hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1200px;
   padding: 0 24px;
   margin: 0 50px;
@@ -52,10 +52,107 @@
   font-size: 1.05rem;
   line-height: 1.7;
   color: #175887af;
+} */
+
+/* ===============================
+   Precision Connection Background
+================================ */
+
+/* .about-precision-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+} */
+
+/* DOTS */
+/* .p-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #175887;
+  opacity: 0;
+  animation: dotFade 7s ease-in-out infinite;
+} */
+
+/* dot placement */
+/* .d1 { top: 28%; left: 62%; animation-delay: 0s; }
+.d2 { top: 42%; left: 78%; animation-delay: 1.5s; }
+.d3 { top: 58%; left: 70%; animation-delay: 3s; }
+.d4 { top: 35%; left: 88%; animation-delay: 4.5s; } */
+
+/* LINES */
+/* .p-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(23, 88, 135, 0.35),
+    transparent
+  );
+  opacity: 0;
+  animation: lineFade 7s ease-in-out infinite;
+} */
+
+/* line placement */
+/* .l1 {
+  width: 140px;
+  top: 31%;
+  left: 64%;
+  transform: rotate(8deg);
+  animation-delay: 1s;
 }
 
+.l2 {
+  width: 120px;
+  top: 47%;
+  left: 72%;
+  transform: rotate(-6deg);
+  animation-delay: 2.5s;
+}
+
+.l3 {
+  width: 160px;
+  top: 56%;
+  left: 74%;
+  transform: rotate(4deg);
+  animation-delay: 4s;
+} */
+
+/* ANIMATIONS */
+/* @keyframes dotFade {
+  0%, 20% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  40%, 70% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes lineFade {
+  0%, 30% {
+    opacity: 0;
+  }
+  45%, 70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+
+
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about-hero {
     min-height: 360px;
   }
@@ -66,5 +163,192 @@
 
   .about-description {
     font-size: 1rem;
+  }
+}  */
+
+
+
+/* =====================================
+   Business Style Banner (No Tailwind)
+===================================== */
+
+.biz-banner {
+  position: relative;
+  max-width: 1280px;
+  height: 350px;
+  margin: 24px auto;
+  padding: 48px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #e2f9ff 0%,
+    #e7ebec 45%,
+    #f6f8f8 100%
+  );
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* CONTENT */
+.biz-content {
+  position: relative;
+  z-index: 3;
+  max-width: 520px;
+}
+
+.biz-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b6a2f;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.biz-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #175887;
+  margin-bottom: 16px;
+}
+
+.biz-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Diagonal panel background */
+.services-hero-bg {
+  position: absolute;
+  inset: 50px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 60%,
+      rgba(96, 154, 198, 0.18) 60%,
+      rgba(96, 155, 198, 0.8) 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 68%,
+      rgba(96, 184, 198, 0.12) 68%,
+      transparent 76%
+    );
+    top: -60px;
+    left: 20%;
+}
+
+
+
+.services-hero-bg1 {
+  position: absolute;
+  inset: 0px;
+  left: 400px;
+  top: 60px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 62%,
+      rgba(96, 154, 198, 0.12) 62%,
+      rgba(96, 155, 198, 0.55) 72%,
+      transparent 72%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 70%,
+      rgba(96, 184, 198, 0.1) 70%,
+      transparent 78%
+    );
+}
+
+/* =====================================
+   GOLD GEOMETRIC SHAPES
+===================================== */
+
+.gold-shape {
+  position: absolute;
+  background: linear-gradient(
+    135deg,
+    #9fd1f5,
+    #2688ce,
+    #175887
+  );
+  z-index: 1;
+}
+
+/* Large diagonal fold */
+.shape-1 {
+  width: 420px;
+  height: 420px;
+  right: -140px;
+  top: -120px;
+  transform: rotate(35deg);
+  box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Inner highlight fold */
+.shape-2 {
+  width: 280px;
+  height: 280px;
+  right: -90px;
+  top: 40px;
+  transform: rotate(35deg);
+  background: linear-gradient(
+    135deg,
+    #418abe,
+    #175887
+  );
+}
+
+/* Thin accent strip */
+.shape-3 {
+  width: 140px;
+  height: 420px;
+  right: 140px;
+  top: -60px;
+  transform: rotate(35deg);
+  opacity: 0.85;
+
+  animation: shape3Float 12s ease-in-out infinite;
+}
+
+
+@keyframes shape3Float {
+  0% {
+    transform: rotate(35deg) translateY(0) translateX(0);
+  }
+  50% {
+    transform: rotate(35deg) translateY(22px) translateX(-10px);
+  }
+  100% {
+    transform: rotate(35deg) translateY(0) translateX(0);
+  }
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .biz-banner {
+    height: auto;
+    padding: 36px 24px;
+  }
+
+  .biz-title {
+    font-size: 2rem;
+  }
+
+  .shape-1 {
+    width: 300px;
+    height: 300px;
+    right: -160px;
+  }
+
+  .shape-3 {
+    display: none;
   }
 }

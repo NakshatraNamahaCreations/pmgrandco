@@ -1,0 +1,135 @@
+/* =================================================
+   SERVICES HERO – CLEAN EXECUTION DESIGN
+================================================= */
+
+.services-hero {
+  position: relative;
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 90px 40px;
+  border-radius: 22px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #bfe1f2 0%,
+    #f2f2f2 50%,
+    #ffffff 100%
+  );
+}
+
+/* Diagonal panel background */
+.services-hero-bg {
+  position: absolute;
+  inset: 50px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 60%,
+      rgba(96, 154, 198, 0.18) 60%,
+      rgba(96, 155, 198, 0.8) 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 68%,
+      rgba(96, 184, 198, 0.12) 68%,
+      transparent 76%
+    );
+    top: -60px;
+    left: 20%;
+}
+
+
+
+.services-hero-bg1 {
+  position: absolute;
+  inset: 0px;
+  left: 400px;
+  top: 60px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 62%,
+      rgba(96, 154, 198, 0.12) 62%,
+      rgba(96, 155, 198, 0.55) 72%,
+      transparent 72%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 70%,
+      rgba(96, 184, 198, 0.1) 70%,
+      transparent 78%
+    );
+}
+
+
+
+
+
+/* CONTENT */
+.services-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 680px;
+  color: #1f2933;
+}
+
+/* Breadcrumb */
+.services-breadcrumb {
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #175887;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Title */
+.services-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #175887;
+  margin-bottom: 18px;
+}
+
+/* Description */
+.services-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4b5d6b;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
+
+@keyframes panelDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 40% 20%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 60px 24px;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .services-description {
+    font-size: 1rem;
+  }
+}

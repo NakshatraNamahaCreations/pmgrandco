@@ -35,10 +35,10 @@ const Footer = () => {
             <MdLocationOn />373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043
           </div>
           <div className="ux-h-item">
-            <FaPhoneAlt /> +91 7010341301
+            <FaPhoneAlt /> +91 9344733377
           </div>
           <div className="ux-h-item">
-            <MdEmail /> casrivaibhav@gmail.com
+            <MdEmail /> info@pmgrandco.com
           </div>
         </div>
       </div>

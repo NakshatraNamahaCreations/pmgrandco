@@ -19,7 +19,7 @@ export default function Home() {
   <AboutSection/>
   <ServiceSection/>*/}
   <HomePage/>
-  <HeroSlider height={480} interval={5000}/>
+  <HeroSlider height={400} interval={5000}/>
   <AbtSection/>
   <ServicePortfolio/>
   <ProcessSection/>

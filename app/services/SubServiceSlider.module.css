@@ -1,15 +1,15 @@
-/* =========================
+/* /* =========================
    GLOBAL SAFETY
 ========================= */
-body {
+/* body {
   overflow-x: hidden;
-}
+} */
 
 /* =========================
    SECTION & WRAPPER
 ========================= */
 
-.section {
+/* .section {
   padding: 30px;
   background-color: #ffffff;
   margin: 0 auto;
@@ -26,18 +26,18 @@ body {
   font-size: 32px;
   font-weight: 800;
   color: #036;
-  font-family: "Poppins", sans-serif;
-}
+  font-family: var(--font-times), sans-serif;
+} */
 
 /* =========================
    SLIDER MASK + FADES
 ========================= */
 
-.sliderMask {
+/* .sliderMask {
   position: relative;
   width: 100%;
   max-width: 100%;
-  overflow: hidden; /* 🔑 CRITICAL */
+  overflow: hidden; 
 }
 
 .fadeLeft,
@@ -48,7 +48,7 @@ body {
   width: 60px;
   z-index: 2;
   pointer-events: none;
-}
+} */
 
 /* .fadeLeft {
   left: 0;
@@ -63,7 +63,7 @@ body {
 /* =========================
    REACT-SLICK FIXES (CRITICAL)
 ========================= */
-
+/* 
 .slick-slider {
   width: 100% !important;
   max-width: 100% !important;
@@ -91,20 +91,20 @@ body {
 
 .slidePad > div {
   height: 100%;
-}
+} */
 
 /* Required when slick is inside flex layouts */
-.content,
+/* .content,
 .serviceSection {
   min-width: 0;
   border: none;
-}
+} */
 
 /* =========================
    CARD
 ========================= */
 
-.card {
+/* .card {
   background: #ffffff;
   border: 1px solid #e9eef3;
   border-radius: 16px;
@@ -112,25 +112,25 @@ body {
   overflow: hidden;
   height: 100%;
   display: flex;
-}
+} */
 
 /* Card Inner Layout */
-.cardRow {
+/* .cardRow {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 14px;
   padding: 20px 18px;
-  min-height: 120px; /* 🔑 SAME HEIGHT */
+  min-height: 120px; 
   width: 100%;
   background: linear-gradient(#c5f3ff, rgb(136, 193, 251));
-}
+} */
 
 /* =========================
    ICON (If Used)
 ========================= */
-
+/* 
 .iconBox {
   width: 68px;
   height: 68px;
@@ -167,27 +167,27 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  flex-shrink: 0; /* 🔑 prevents shrinking */
+  flex-shrink: 0; 
   transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .card:hover .iconBox {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.35);
-}
+} */
 
 
 /* =========================
    TEXT
 ========================= */
-.title {
+/* .title {
   margin: 0;
   color: #175885;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.25;
-  font-family: "Poppins", sans-serif;
-  text-align: left;   /* 🔑 aligns nicely with icon */
+  font-family: var(--font-times), sans-serif;
+  text-align: left;   
 }
 
 .desc {
@@ -196,14 +196,14 @@ body {
   line-height: 1.5;
   text-align: left;
   margin: 0;
-}
+} */
 
 
 /* =========================
    NAV ARROWS
 ========================= */
 
-.nav {
+/* .nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -224,13 +224,13 @@ body {
 
 .next {
   right: -10px;
-}
+} */
 
 /* =========================
    DOTS (If Enabled)
 ========================= */
 
-.slick-dots {
+/* .slick-dots {
   bottom: -28px;
 }
 
@@ -241,12 +241,12 @@ body {
 
 .slick-dots li.slick-active button:before {
   color: #0f7f6f;
-}
+} */
 
 /* =========================
    RESPONSIVE
 ========================= */
-
+/* 
 @media (max-width: 768px) {
   .cardRow {
     min-height: 200px;
@@ -259,5 +259,75 @@ body {
 
   .h2 {
     font-size: 25px;
+  }
+} */
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* CARD */
+.card {
+  background: #f8fbff;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid #e6eef7;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(23, 88, 133, 0.12);
+}
+
+/* HEADER */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #175885;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #175885;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 }

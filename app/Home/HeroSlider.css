@@ -1,30 +1,41 @@
-/* components/HeroSlider.css */
+/* ======================================================
+   HERO SLIDER BASE
+====================================================== */
 
 .hh-hero-slider {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  font-family: var(--font-poppins), sans-serif;
-   background: linear-gradient(135deg, #e6f4ff 0%, #cfeeff 50%, #b8e2ff 100%);
-   max-width: 1280px;
-   margin: 20px auto;
+  font-family: var(--font-times), sans-serif;
+  background: linear-gradient(
+    135deg,
+    #bfe1f2 0%,
+    #f2f2f2 50%,
+    #ffffff 100%
+  );
+  max-width: 1280px;
+  margin: 20px auto;
+
 }
 
-/* Slides wrapper */
+/* ======================================================
+   SLIDES
+====================================================== */
+
 .hh-slides {
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 
-/* Each slide (text-only) */
 .hh-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
   transform: translateX(18px);
   transition: opacity 460ms ease, transform 460ms ease;
- height: 450px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,60 +43,357 @@
   box-sizing: border-box;
 }
 
-/* Active slide visible */
 .hh-slide.active {
   opacity: 1;
   transform: translateX(0);
   position: relative;
 }
 
-/* overlay to position content and allow contrast */
 .hh-overlay {
   width: 100%;
   display: flex;
   align-items: center;
   height: 100%;
-  justify-content: flex-start; /* left-aligned content */
+  justify-content: flex-start;
   padding-left: 36px;
   box-sizing: border-box;
 }
 
-/* content box */
 .hh-content {
   max-width: 720px;
-  background: transparent; /* subtle soft card over gradient */
   padding: 20px 24px;
-  border-radius: 8px;
   color: #04203a;
 }
 
-/* Title & subtitle */
 .hh-title {
   font-size: 50px;
   line-height: 1.05;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   font-weight: 700;
   color: #04203a;
 }
 
 .hh-subtitle {
   font-size: 17px;
-  margin: 0 0 16px 0;
   color: #07304a;
-  opacity: 0.95;
 }
 
-/* CTA */
-.hh-cta {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #04203a;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  box-shadow: 0 8px 20px rgba(4, 32, 58, 0.12);
+/* ======================================================
+   NETWORK / CLUSTER BACKGROUND
+====================================================== */
+
+/* .hh-network-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+} */
+
+/* ---------- RINGS (VISIBLE) ---------- */
+/* .hh-network-bg .ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(4, 32, 58, 0.14);
+} */
+
+/* Ring positions */
+/* .hh-network-bg .ring-1 {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 80px;
 }
+
+.hh-network-bg .ring-2 {
+  width: 560px;
+  height: 560px;
+  right: -200px;
+  top: 20px;
+  opacity: 0.45;
+}
+
+.hh-network-bg .ring-3 {
+  width: 720px;
+  height: 720px;
+  right: -300px;
+  top: -40px;
+  opacity: 0.25;
+} */
+
+/* ======================================================
+   ORBITS (ROTATING CONTAINERS)
+====================================================== */
+
+/* .orbit {
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit 26s linear infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.orbit-1 {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: 80px;
+  animation-duration: 25s;
+}
+
+.orbit-2 {
+  width: 560px;
+  height: 560px;
+  right: -200px;
+  top: 20px;
+  animation-duration: 26s;
+  animation-direction: reverse;
+}
+
+.orbit-3 {
+  width: 720px;
+  height: 720px;
+  right: -300px;
+  top: -40px;
+  animation-duration: 28s;
+} */
+
+/* ======================================================
+   NODE (DOT MOVING ON RINGS)
+====================================================== */
+
+/* .orbit .node {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 0 6px rgba(23, 88, 135, 0.25);
+} */
+
+/* ======================================================
+   ANIMATION
+====================================================== */
+
+/* @keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Diagonal panel background */
+.services-hero-bg {
+  position: absolute;
+  inset: 50px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 60%,
+      rgba(96, 154, 198, 0.18) 60%,
+      rgba(96, 155, 198, 0.8) 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 68%,
+      rgba(96, 184, 198, 0.12) 68%,
+      transparent 76%
+    );
+    top: -60px;
+    left: 20%;
+}
+
+
+
+.services-hero-bg1 {
+  position: absolute;
+  inset: 0px;
+  left: 400px;
+  top: 60px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 62%,
+      rgba(96, 154, 198, 0.12) 62%,
+      rgba(96, 155, 198, 0.55) 72%,
+      transparent 72%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 70%,
+      rgba(96, 184, 198, 0.1) 70%,
+      transparent 78%
+    );
+}
+
+
+/* ======================================================
+   DOTS
+====================================================== */
+
+.hh-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  width: 120px;
+  z-index: 3;
+}
+
+.hh-dot {
+  flex: 1;
+  height: 4px;
+  background: rgba(4, 32, 58, 0.25);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.hh-dot.active {
+  background: #04203a;
+  transform: scaleY(1.4);
+}
+
+/* ======================================================
+   ACTION BAR
+====================================================== */
+
+.hh-action-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 26px 0;
+}
+
+/* PRIMARY BUTTON */
+.hh-action-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 26px 0;
+}
+
+/* BASE BUTTON */
+.hh-action-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  padding: 14px 34px;
+
+  font-family: var(--font-poppins, sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  /* TEXT */
+  color: #2f3a17;
+
+  /* SUBTLE BASE GRADIENT (NOT PLAIN) */
+  background: linear-gradient(
+    180deg,
+    #ffffff,
+    #eff3f7
+  );
+
+  border-radius: 10px;
+
+  /* CHARACTER BORDER */
+  border: 1.5px solid rgba(61, 72, 29, 0.35);
+
+  /* DEPTH */
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* GOLD ACCENT STRIP (ALWAYS VISIBLE) */
+.hh-action-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #175887,
+    #175887
+  );
+}
+
+/* TEXT ABOVE EVERYTHING */
+.hh-action-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+/* LIGHT SWEEP (ON HOVER) */
+.hh-action-btn::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(0, 140, 255, 0.35),
+    transparent 60%
+  );
+  transform: rotate(8deg);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+/* HOVER */
+.hh-action-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #1d3248,
+    #325567
+  );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.hh-action-btn:hover::before {
+  opacity: 1;
+  transform: translateX(35%) rotate(8deg);
+}
+
+/* ACTIVE */
+.hh-action-btn:active {
+  transform: translateY(-1px);
+}
+
 
 /* Arrows */
 .hh-arrow {
@@ -114,87 +422,26 @@
   right: 12px;
 }
 
-/* Dots */
-.hh-dots {
-  position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  width: 5%;            /* dots container spans wider */
-  z-index: 6;
-}
+/* ======================================================
+   RESPONSIVE
+====================================================== */
 
-.hh-dot {
-  flex: 1;               /* makes each dot stretch like a line */
-  height: 4px;           /* thin horizontal line */
-  background: rgba(4, 32, 58, 0.25);
-  border: none;
-  border-radius: 4px;    /* slight curve for soft line */
-  cursor: pointer;
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-
-/* Active bar */
-.hh-dot.active {
-  background: #04203a;
-  transform: scaleY(1.4); /* makes active bar thicker */
-}
-
-/* Static action button bar under the slider */
-.hh-action-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  padding: 22px 0;
- 
-}
-
-.hh-action-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #175887;
-  color: #ffffff;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 6px 18px rgba(4, 32, 58, 0.15);
-  transition: background 0.25s ease, transform 0.25s ease;
-  width: 250px;
-  text-align: center;
-}
-
-.hh-action-btn:hover {
-  background: #175887;
-  transform: translateY(-2px);
-}
-
-
-/* Responsive tweaks */
 @media (max-width: 900px) {
   .hh-overlay {
     justify-content: center;
     padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .hh-content {
-    max-width: 92%;
     text-align: center;
   }
 
   .hh-title {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .hh-subtitle {
     font-size: 14px;
   }
 
-  .hh-arrow {
-    display: none; /* hide arrows on small screens */
+  .hh-network-bg {
+    opacity: 0.45;
   }
 }
-

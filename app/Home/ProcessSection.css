@@ -1,5 +1,5 @@
 :root {
-  --pf-blue: #0b5ed7;
+  --pf-blue: #175887;
   --pf-blue-soft: #e5efff;
   --pf-dark: #0f172a;
   --pf-muted: #6b7280;
@@ -187,7 +187,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(135deg, #0b5ed7, #2563eb);
+  background: linear-gradient(135deg, #175887, #2688cd);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.55);
   z-index: 2;
 }

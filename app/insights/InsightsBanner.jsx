@@ -1,6 +1,6 @@
-import "./ServiceBanner.css";
+import "../services/ServiceBanner.css";
 
-export default function AbtBanner() {
+export default function InsightsBanner() {
   return (
     <section className="services-hero">
       <div className="services-hero-bg" />
@@ -9,12 +9,12 @@ export default function AbtBanner() {
       <div className="services-hero-content">
      
 
-        <h1 className="services-title">Our Services</h1>
+        <h1 className="services-title">Our Blog</h1>
 
-        <p className="services-description">
+        {/* <p className="services-description">
           We offer a unified suite of audit, tax, compliance, and financial advisory services designed to support businesses at every stage. Our approach brings structure, clarity, and disciplined execution to your statutory and financial requirements.
 
-        </p>
+        </p> */}
       </div>
     </section>
   );

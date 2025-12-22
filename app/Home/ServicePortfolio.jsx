@@ -130,7 +130,7 @@ import Slider from "react-slick";
 import "./ServicePortfolio.css"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Link from "next/link";
 import {
   FaBalanceScale,
   FaClipboardCheck,
@@ -261,7 +261,7 @@ const ServicePortfolioCarousel = () => {
     <section className="svc-section" id="1">
       <div className="svc-inner">
         <div className="svc-header" data-aos="fade-up">
-          <p className="svc-eyebrow">Our Service Portfolio</p>
+          <p className="svc-kicker">Our Service Portfolio</p>
           <h2 className="svc-title">All your business needs under one roof</h2>
           <p className="svc-subtitle">
             A focused suite of services designed to enhance governance, manage risk and support growth for businesses across sectors.
@@ -293,9 +293,11 @@ const ServicePortfolioCarousel = () => {
         </div>
 
         <div className="svc-actions" data-aos="fade-up">
+          <Link href="/services">
           <button type="button" className="svc-view-all-btn">
             View all services
           </button>
+          </Link>
         </div>
       </div>
     </section>

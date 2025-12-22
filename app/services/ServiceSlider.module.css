@@ -2,7 +2,7 @@
    GLOBAL SAFETY
 ========================= */
 body {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 /* =========================
@@ -10,7 +10,7 @@ body {
 ========================= */
 .wrapper {
  
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 80px 16px;
   gap: 48px;
@@ -65,6 +65,8 @@ body {
   margin-top: 150px;
 }
 
+
+
 /* =========================
    SERVICE SECTION
 ========================= */
@@ -86,6 +88,11 @@ body {
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 12px;
+}
+
+.heading{
+  color: #175885;
+  font-weight: 700;
 }
 
 .headingIcon {
@@ -146,7 +153,7 @@ body {
 .bookbtn{
   background-color: #175885;
   color: #fff;
-  font-family: 'poppins', sans-serif;
+  font-family: var(--font-times), sans-serif;
   font-weight: 600;
   border: none;
   padding: 10px 15px;
@@ -183,50 +190,71 @@ body {
 }
 
 /* TOP TABS */
+.serviceSection {
+  scroll-margin-top: 270px; /* offset for fixed header */
+  margin-bottom: 40px;
+}
+
+
 .tabs {
   display: flex;
-  gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #e5e7eb;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+
+  position: sticky;
+  top: 70px;               /* height of your fixed header */
+  z-index: 50;
+
+  background: #ffffff;    /* prevents content bleed-through */
+  padding: 16px 0;
 }
 
-.tabs::-webkit-scrollbar {
-  display: none;
+
+.tab {
+  flex: 0 0 calc(20% - 15px); /* 5 per row */
 }
 
+.label{
+  font-size: 15px;
+}
+
+/* TAB */
 .tab {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 12px 18px;
-  border-radius: 999px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #175885;
   border: none;
-  background: #f3f4f6;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
   transition: all 0.25s ease;
-}
-
-.tab:hover {
-  background: #e5e7eb;
-}
-
-.active {
-  background: #0b5ed7;
+  text-align: center;
+  white-space: normal; /* allow wrap */
   color: #fff;
 }
 
-/* CONTENT */
-.content {
-  margin-top: 28px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 32px;
+.tab:hover {
+  background: #eaf4ff;
+  color: #175885;
+  border: 1px solid #175885;
 }
+
+.active {
+  background: #ecf7ff;
+  opacity: 1;
+  box-shadow: 0 8px 22px rgba(23, 88, 133, 0.35);
+  transform: translateY(-2px);
+  color: #175885;
+}
+
+
+.icon{
+  size: 20px;
+}
+
 
 .heading {
   display: flex;
@@ -242,20 +270,31 @@ body {
   color: #444;
 }
 
-.bookbtn {
-  margin-top: 14px;
-  padding: 12px 26px;
-  border-radius: 30px;
-  background: #0b5ed7;
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-}
+
 
 /* MOBILE TWEAK */
 @media (max-width: 768px) {
   .content {
     padding: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 }

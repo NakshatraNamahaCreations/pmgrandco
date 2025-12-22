@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaLocationArrow } from "react-icons/fa";
-import { FaLocationDot, FaMapLocation } from "react-icons/fa6";
+import { FaBuilding, FaEnvelope, FaLocationArrow, FaPhoneAlt, FaRegClock, FaUserCog } from "react-icons/fa";
+import { FaLocationCrosshairs, FaLocationDot, FaMapLocation } from "react-icons/fa6";
 import "./Contact.css";
 
 export const metadata = {
@@ -45,17 +45,33 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
       <div className="contact-container">
-        <h1 className="contact-heading">Get In Touch</h1>
+        <section className="services-hero">
+      <div className="services-hero-bg" />
+      <div className="services-hero-bg1"/>
+
+      <div className="services-hero-content">
+     
+
+        <h1 className="services-title">Get In Touch</h1>
+
+        <p className="services-description">
+         We'd be glad to hear from you. Send us a note and our team will connect
+          with you soon.
+
+        </p>
+      </div>
+    </section>
+        {/* <h1 className="contact-heading">Get In Touch</h1>
 
         <p className="contact-intro">
           We'd be glad to hear from you. Send us a note and our team will connect
           with you soon.
-        </p>
+        </p> */}
 
         {/* CONTACT GRID */}
-        <div className="contact-grid">
+       
           {/* LEFT — FORM */}
-          <div className="contact-form-wrapper">
+          {/* <div className="contact-form-wrapper">
             <form className="ca-contact-form" onSubmit={handleSubmit}>
               <div className="ca-form-row">
                 <div className="ca-form-field">
@@ -123,10 +139,10 @@ export default function ContactPage() {
                 Book a Consultation                                                                                 
               </button>
             </form>
-          </div>
+          </div> */}
 
           {/* RIGHT — CONTACT INFO */}
-          <aside className="contact-info">
+          {/* <aside className="contact-info">
             <h2>Contact Information</h2>
 
             <h3>Head Office</h3>
@@ -158,8 +174,36 @@ export default function ContactPage() {
 
             <h3>Office Hours</h3>
             <p>10 AM – 6 PM (Monday – Saturdays)</p>
-          </aside>
+          </aside> */}
+
+<div className="sol-cards">
+          <article className="sol-card" data-aos="fade-right">
+            <div className="sol-icon">
+              <FaBuilding className="sol-react-icon" />
+            </div>
+            <h3>Head Office: </h3>
+            <p>Coimbatore<br/>Address: 373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043</p>
+            <p>[View on Google maps]</p>
+           
+          </article>
+
+          <article className="sol-card" data-aos="fade-up">
+            <div className="sol-icon">
+              <FaPhoneAlt className="sol-react-icon" />
+            </div>
+            <h3 className="title">Phone</h3>
+            <p>+91 9344733377</p>
+          </article>
+
+          <article className="sol-card" data-aos="fade-left">
+            <div className="sol-icon">
+              <FaEnvelope className="sol-react-icon" />
+            </div>
+            <h3>Email</h3>
+            <p>Partner1 email, Partner2 email</p>
+          </article>
         </div>
+
 
         {/* LOCATIONS */}
   <section className="branches-section">
@@ -195,7 +239,7 @@ export default function ContactPage() {
     },
     {
       city: "Tiruppur",
-      icon: <FaLocationArrow />,
+      icon: <FaLocationCrosshairs />,
       address: "4/41, CK's Aishwaryam, Palladam Road – 641605",
       phone: "+91 99439 66077",
       email: "partner6@email.com",

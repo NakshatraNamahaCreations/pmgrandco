@@ -4,8 +4,7 @@
 
 .contact-page {
   background: #f8fafc;
-  padding: 60px 20px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-times), sans-serif;
 }
 
 .contact-container {
@@ -129,7 +128,7 @@
   font-size: 0.95rem;
   border-radius: 10px;
   border: 1px solid #dfe7f1;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   outline: none;
   transition: all 0.25s ease;
 }
@@ -176,9 +175,9 @@
    LOCATION CARDS
 ================================ */
 
-.solutions-cards {
+/* .solutions-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   max-width: 1200px;
   margin: 60px auto;
@@ -195,7 +194,7 @@
 }
 
 /* LEFT ACCENT BAR */
-.solutions-card::after {
+/* .solutions-card::after {
   content: "";
   position: absolute;
   left: 0;
@@ -203,10 +202,10 @@
   width: 5px;
   height: 100%;
   background: linear-gradient(180deg, #147ceb, #175887);
-}
+} */
 
 /* TOP RIGHT DECORATIVE SHAPE */
-.solutions-card::before {
+/* .solutions-card::before {
   content: "";
   position: absolute;
   top: -40px;
@@ -226,10 +225,10 @@
 
 .solutions-card:hover::before {
   opacity: 0.3;
-}
+} */
 
 /* Card Header */
-.solutions-card-header {
+/* .solutions-card-header {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -256,10 +255,10 @@
   font-weight: 600;
   color: #0f172a;
   margin: 0;
-}
+} */
 
 /* Card Details */
-.solutions-details {
+/* .solutions-details {
   font-size: 0.95rem;
   color: #475569;
   line-height: 1.6;
@@ -313,7 +312,7 @@
 .contact-link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
+} */
 
 
 
@@ -321,7 +320,7 @@
    RESPONSIVE
 ================================ */
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .ca-form-row {
     grid-template-columns: 1fr;
   }
@@ -361,5 +360,450 @@
 
   .contact-intro {
     font-size: 0.95rem;
+  }
+} */
+
+
+.services-hero {
+  position: relative;
+  max-width: 1280px;
+  margin: 24px auto;
+  padding: 90px 40px;
+  border-radius: 22px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #bfe1f2 0%,
+    #f2f2f2 50%,
+    #ffffff 100%
+  );
+}
+
+/* Diagonal panel background */
+.services-hero-bg {
+  position: absolute;
+  inset: 50px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 60%,
+      rgba(96, 154, 198, 0.18) 60%,
+      rgba(96, 155, 198, 0.8) 70%,
+      transparent 70%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 68%,
+      rgba(96, 184, 198, 0.12) 68%,
+      transparent 76%
+    );
+    top: -60px;
+    left: 20%;
+}
+
+
+
+.services-hero-bg1 {
+  position: absolute;
+  inset: 0px;
+  left: 400px;
+  top: 60px;
+  background:
+    linear-gradient(
+      115deg,
+      transparent 62%,
+      rgba(96, 154, 198, 0.12) 62%,
+      rgba(96, 155, 198, 0.55) 72%,
+      transparent 72%
+    ),
+    linear-gradient(
+      115deg,
+      transparent 70%,
+      rgba(96, 184, 198, 0.1) 70%,
+      transparent 78%
+    );
+}
+
+
+
+
+
+/* CONTENT */
+.services-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 680px;
+  color: #1f2933;
+}
+
+/* Breadcrumb */
+.services-breadcrumb {
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #175887;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* Title */
+.services-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #175887;
+  margin-bottom: 18px;
+}
+
+/* Description */
+.services-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4b5d6b;
+}
+
+
+/* ======================================================
+   ALTERNATING ROUTE MAP / TIMELINE
+====================================================== */
+
+.branches-section {
+  margin-top: 120px;
+}
+
+.branches-heading {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 80px;
+}
+
+/* ======================================================
+   ROUTE CONTAINER
+====================================================== */
+
+.solutions-cards {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Central Route Line */
+.solutions-cards::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #175887 0%,
+    #60a5fa 50%,
+    #175887 100%
+  );
+  border-radius: 4px;
+}
+
+/* ======================================================
+   ROUTE STOP / CARD
+====================================================== */
+
+.solutions-card {
+  position: relative;
+  width: calc(50% - 60px);
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 32px 36px;
+  border: 1px solid #e5ecf5;
+  box-shadow: 0 18px 40px rgba(2, 32, 71, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* LEFT SIDE */
+.solutions-card:nth-child(odd) {
+  align-self: flex-start;
+  text-align: right;
+}
+
+/* RIGHT SIDE */
+.solutions-card:nth-child(even) {
+  align-self: flex-end;
+  text-align: left;
+}
+
+/* Hover */
+.solutions-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(2, 32, 71, 0.14);
+}
+
+/* ======================================================
+   MAP PIN
+====================================================== */
+
+.solutions-card::before {
+  content: "";
+  position: absolute;
+  
+  top: 36px;
+  width: 22px;
+  height: 22px;
+  background: #175887;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 6px rgba(23, 88, 135, 0.25);
+  z-index: 2;
+}
+
+/* Pin Position */
+.solutions-card:nth-child(odd)::before {
+  right: -15%;
+}
+
+.solutions-card:nth-child(even)::before {
+  left: -15%;
+}
+
+/* ======================================================
+   CARD HEADER
+====================================================== */
+
+.solutions-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Reverse header on left cards */
+.solutions-card:nth-child(odd) .solutions-card-header {
+  flex-direction: row-reverse;
+}
+
+.solutions-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(23, 88, 135, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solutions-react-icon {
+  font-size: 22px;
+  color: #175887;
+}
+
+.solutions-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* ======================================================
+   DETAILS
+====================================================== */
+
+.solutions-details {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.solutions-details p {
+  margin-bottom: 8px;
+}
+
+/* Links */
+.map-link {
+  display: inline-block;
+  margin: 10px 0 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #175887;
+  text-decoration: none;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.contact-link {
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #175887;
+  text-decoration: underline;
+}
+
+/* ======================================================
+   RESPONSIVE – STACK ON MOBILE
+====================================================== */
+
+@media (max-width: 900px) {
+  .solutions-cards::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .solutions-card {
+    width: 100%;
+    padding-left: 52px;
+    text-align: left !important;
+  }
+
+  .solutions-card:nth-child(odd),
+  .solutions-card:nth-child(even) {
+    align-self: stretch;
+  }
+
+  .solutions-card::before {
+    left: -32px !important;
+    right: auto !important;
+  }
+
+  .solutions-card-header {
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .branches-heading {
+    font-size: 1.8rem;
+  }
+
+  .solutions-card {
+    padding: 26px;
+  }
+}
+
+
+
+
+
+
+
+/*contact info*/
+/* ======================================================
+   SOLUTION / CONTACT CARDS – MODERN ELEGANT DESIGN
+====================================================== */
+
+.sol-cards {
+  display: flex;
+  gap: 32px;
+  margin-top: 60px;
+  align-items: stretch; /* ensures equal height */
+}
+
+/* ------------------------------------------------------
+   CARD BASE
+------------------------------------------------------ */
+.sol-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e6ebf5;
+  box-shadow: 0 12px 30px rgba(2, 32, 71, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle top accent line */
+.sol-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #175887, #60a5fa);
+  opacity: 0.9;
+}
+
+/* hover */
+.sol-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(2, 32, 71, 0.12);
+  border-color: #cfe0f5;
+}
+
+/* ------------------------------------------------------
+   ICON
+------------------------------------------------------ */
+.sol-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #175887, #0d4c7d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.sol-react-icon {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------
+   TITLE
+------------------------------------------------------ */
+.sol-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+}
+
+/* ------------------------------------------------------
+   CONTENT
+------------------------------------------------------ */
+.sol-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+
+/* ------------------------------------------------------
+   LINKS (Google Maps etc.)
+------------------------------------------------------ */
+.sol-card a {
+  font-weight: 600;
+  color: #175887;
+  text-decoration: none;
+}
+
+.sol-card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------ */
+@media (max-width: 992px) {
+  .sol-cards {
+    flex-direction: column;
+    gap: 24px;
   }
 }

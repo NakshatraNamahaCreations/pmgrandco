@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./AbtSection.css";
-import { FaLocationArrow, FaRegClock, FaUserCog } from "react-icons/fa";
+import { FaArrowRight, FaLocationArrow, FaPaperPlane, FaRegClock, FaUserCog } from "react-icons/fa";
 import { FaUsers, FaMedal, FaBullseye } from "react-icons/fa";
 import { FaUserDoctor } from "react-icons/fa6";
 import Link from "next/link";
@@ -100,8 +100,8 @@ const AbtSection = () => {
  {/* CTA Button */}
   <div className="hero-feature-cta">
     <Link href="/team">
-    <button className="hero-feature-btn">
-      Interested to Know More? Meet our Team
+  <span style={{fontSize:"18px", color:"#175887", fontWeight:"bold"}}> Interested to Know More?</span>  <button className="hero-feature-btn">
+    <FaPaperPlane size={18}/>  Meet our Team
     </button>
     </Link>
   </div>

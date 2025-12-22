@@ -3,6 +3,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import "./HeroSlider.css";
+import { FaCogs, FaPhoneAlt, FaUser } from "react-icons/fa";
 
 /**
  * Slides: each slide may include a `highlight` object where
@@ -122,10 +123,10 @@ function escapeHtml(str) {
 
 export default function HeroSlider({
   slides = defaultSlides,
-  interval = 6000,
+  interval = 2000,
   showArrows = true,
   showDots = true,
-  height = 420,
+  height = 350,
 }) {
   const count = slides.length;
   const [idx, setIdx] = useState(0);
@@ -210,6 +211,19 @@ export default function HeroSlider({
         role="region"
         aria-label="Hero slider"
       >
+       {/* <div class="hh-network-bg">
+  <span class="ring ring-1"></span>
+  <span class="ring ring-2"></span>
+  <span class="ring ring-3"></span>
+
+  <span class="orbit orbit-1"><span class="node"></span></span>
+  <span class="orbit orbit-2"><span class="node"></span></span>
+  <span class="orbit orbit-3"><span class="node"></span></span>
+</div> */}
+ <div className="services-hero-bg" />
+      <div className="services-hero-bg1"/>
+
+
         <div className="hh-slides">
           {slides.map((s, i) => {
             const isActive = i === idx;
@@ -289,10 +303,10 @@ export default function HeroSlider({
        {/* Static Action Buttons */}
       <div className="hh-action-bar">
         <a className="hh-action-btn" href="#1">
-          Our Services
+         <span><FaCogs size={20} style={{marginRight: "10px"}}/> Our Services</span>
         </a>
         <a className="hh-action-btn" href="#2">
-          Contact Us
+         <span><FaUser size={18}  style={{marginRight: "10px"}}/>Book a Consultation</span> 
         </a>
       </div>
     </>

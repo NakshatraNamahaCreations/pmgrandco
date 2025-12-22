@@ -137,7 +137,7 @@
   background-color: #f9fafb;
   transition: border-color 0.18s ease, box-shadow 0.18s ease,
     background-color 0.18s ease;
-  font-family: inherit;
+  font-family: var(--font-times);
   width: 100%;
 }
 
@@ -168,7 +168,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  background: linear-gradient(135deg, #175887, #2e8cd0);
   color: #ffffff;
   box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
   transition: transform 0.15s ease, box-shadow 0.15s ease,

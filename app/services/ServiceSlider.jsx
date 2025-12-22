@@ -130,14 +130,12 @@
 //   );
 // }
 
-
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./ServiceSlider.module.css";
-import SubServiceSlider from "./SubServiceSlider";
-import BookingDrawer from "../Home/BookingDrawer";
 
+import BookingDrawer from "../Home/BookingDrawer";
 import {
   FaBalanceScale,
   FaGlobe,
@@ -159,6 +157,7 @@ import { accountingSupportData } from "./AccountingSupportData";
 import { FinancialAnalysisData } from "./FinancialAnalysisData";
 import { cfoData } from "./CfoData";
 import { CertificationsData } from "./CertificationsData";
+import SubServiceGrid from "./SubServiceSlider";
 
 const services = [
   { id: "direct-tax", label: "Direct Tax Advisory", icon: <FaBalanceScale /> },
@@ -172,7 +171,7 @@ const services = [
   { id: "modelling", label: "Financial Modelling", icon: <FaCertificate /> },
 ];
 
-const sliderMap = {
+const serviceDataMap = {
   "direct-tax": directTaxData,
   "indirect-tax": indirectTaxData,
   audit: auditData,
@@ -185,37 +184,78 @@ const sliderMap = {
 };
 
 export default function ServiceSlider() {
-  const [active, setActive] = useState(services[0]);
   const [open, setOpen] = useState(false);
+const [activeTab, setActiveTab] = useState(null);
+
+
+  const sectionRefs = useRef({});
+
+  // 👉 Scroll to section on tab click
+  const handleTabClick = (id) => {
+    sectionRefs.current[id]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  // 👉 Scroll spy logic
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveTab(entry.target.dataset.id);
+        }
+      });
+    },
+    {
+      rootMargin: "-120px 0px -60% 0px",
+      threshold: 0.1,
+    }
+  );
+
+  Object.values(sectionRefs.current).forEach((section) => {
+    if (section) observer.observe(section);
+  });
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <section className={styles.wrapper}>
-      {/* HORIZONTAL TABS */}
+      {/* STICKY TABS */}
       <div className={styles.tabs}>
         {services.map((s) => (
           <button
             key={s.id}
             className={`${styles.tab} ${
-              active.id === s.id ? styles.active : ""
+              activeTab === s.id ? styles.active : ""
             }`}
-            onClick={() => setActive(s)}
+            onClick={() => handleTabClick(s.id)}
           >
             <span className={styles.icon}>{s.icon}</span>
-            <span>{s.label}</span>
+            <span className={styles.label}>{s.label}</span>
           </button>
         ))}
       </div>
 
-      {/* CONTENT */}
+      {/* ALL SERVICE SECTIONS */}
       <div className={styles.content}>
-        <h2 className={styles.heading}>
-          {active.icon}
-          <span>{active.label}</span>
-        </h2>
+        {services.map((s) => (
+          <section
+            key={s.id}
+            ref={(el) => (sectionRefs.current[s.id] = el)}
+            data-id={s.id}
+            className={styles.serviceSection}
+          >
+            <h2 className={styles.heading}>
+              {s.icon}
+              <span>{s.label}</span>
+            </h2>
 
-        {sliderMap[active.id] && (
-          <SubServiceSlider data={sliderMap[active.id]} />
-        )}
+            <SubServiceGrid data={serviceDataMap[s.id]} />
+          </section>
+        ))}
 
         <p className={styles.para}>
           Would you like to explore how these services fit your needs?

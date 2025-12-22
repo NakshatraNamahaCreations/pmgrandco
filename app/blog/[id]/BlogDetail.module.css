@@ -1,0 +1,331 @@
+/* =========================
+   TWO COLUMN LAYOUT
+========================= */
+.pageLayout {
+  max-width: 1280px;
+  margin:  50px auto;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  padding: 0 20px;
+}
+
+/* =========================
+   STICKY FORM
+========================= */
+.stickyForm {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  height: fit-content;
+}
+
+.stickyForm h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0e3a5d;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #0e3a5d;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.form button:hover {
+  background: #175887;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .pageLayout {
+    grid-template-columns: 1fr;
+    margin-top: -80px;
+  }
+
+  .stickyForm {
+    position: relative;
+    top: auto;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+.wrapper {
+  background: linear-gradient(180deg, #eef4fb 0%, #ffffff 100%);
+  padding-bottom: 90px;
+}
+
+/* =========================
+   HERO / BANNER
+========================= */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92);
+}
+
+/* =========================
+   MAIN CONTENT CONTAINER
+========================= */
+.container {
+  max-width: 980px;
+  margin:  50px 0;
+  background: #ffffff;
+  padding: 56px 64px;
+  border-radius: 22px;
+ 
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   TITLE
+========================= */
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0e3a5d;
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+/* =========================
+   BLOG DESCRIPTION (HTML)
+========================= */
+.description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #2e2e2e;
+}
+
+/* Paragraphs */
+.description p {
+  margin-bottom: 20px;
+}
+
+/* Headings inside editor */
+.description h2 {
+  font-size: 28px;
+  color: #0e3a5d;
+  margin: 44px 0 18px;
+  font-weight: 800;
+}
+
+.description h3 {
+  font-size: 23px;
+  color: #123a52;
+  margin: 34px 0 16px;
+  font-weight: 700;
+}
+
+/* Lists */
+.description ul,
+.description ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.description li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+.description a {
+  color: #0e3a5d;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faqSection {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.faqSection h2{
+  color: #175887;
+  font-weight: 600;
+}
+
+.faqQuestion {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0e3a5d;
+  padding: 22px 24px;
+  border-radius: 14px;
+  transition: background 0.25s ease;
+}
+
+/* Hover effect */
+.faqQuestion:hover {
+  background: #f3f7fc;
+}
+
+/* =========================
+   FAQ ITEM CARD
+========================= */
+.faqItem {
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  border: 1px solid #e6edf5;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  margin-top: 30px;
+}
+
+/* Active FAQ */
+.active {
+  border-color: #0e3a5d;
+  box-shadow: 0 18px 45px rgba(14, 58, 93, 0.15);
+}
+
+/* =========================
+   CHEVRON ICON
+========================= */
+.chevronIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #eef4fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #0e3a5d;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+/* Rotate icon when open */
+.rotate {
+  transform: rotate(180deg);
+  background: #0e3a5d;
+  color: #ffffff;
+}
+
+/* =========================
+   ANSWER WRAPPER
+========================= */
+.faqAnswer {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 24px;
+}
+
+/* Answer text */
+.faqAnswer p {
+  margin: 16px 0 22px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .faqQuestion {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+
+  .faqAnswer p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: -90px;
+    padding: 48px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 340px;
+  }
+
+  .container {
+    margin-top: -70px;
+    padding: 34px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 260px;
+  }
+
+  .container {
+    margin-top: -50px;
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
