@@ -225,7 +225,7 @@ export default function TeamList() {
         {/* MEMBER 1 */}
         <article className="editorial-row">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Mithuna D V" />
+            <img src="/images/Mithuna.jpg" alt="Mithuna D V" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Coimbatore, Tamil Nadu</span>
@@ -259,7 +259,7 @@ export default function TeamList() {
         {/* MEMBER 2 */}
         <article className="editorial-row reverse">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Sri Vaibhav V" />
+            <img src="/images/Vaibhav.JPG" alt="Sri Vaibhav V" />
             <div className="meta">
               <span>DOJ: Jan 2026</span>
               <span>Coimbatore, Tamil Nadu</span>
@@ -294,7 +294,7 @@ export default function TeamList() {
         {/* MEMBER 3 */}
         <article className="editorial-row">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Rahul R M" />
+            <img src="/images/Rahul.png" alt="Rahul R M" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Sulur (Coimbatore)</span>
@@ -329,7 +329,7 @@ export default function TeamList() {
         {/* MEMBER 4 */}
         <article className="editorial-row reverse">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Pramoth P" />
+            <img src="/images/Pramoth.jpg" alt="Pramoth P" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Pazhani, Tamil Nadu</span>
@@ -365,7 +365,7 @@ export default function TeamList() {
         {/* MEMBER 5 */}
         <article className="editorial-row">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Gowshika T" />
+            <img src="/images/Gowshika.jpg" alt="Gowshika T" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Salem, Tamil Nadu</span>
@@ -399,7 +399,7 @@ export default function TeamList() {
         {/* MEMBER 6 */}
         <article className="editorial-row reverse">
           <aside className="editorial-media">
-            <img src="/images/accountant-1.png" alt="Gowrinitharshna C" />
+            <img src="/images/Gowri.jpg" alt="Gowrinitharshna C" />
             <div className="meta">
               <span>DOJ: Jan 2026</span>
               <span>Tiruppur, Tamil Nadu</span>
