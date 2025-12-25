@@ -43,7 +43,7 @@ export default function BlogDetailPage() {
     <>
     <HomePage/>
     <section className={styles.wrapper}>
-      {blog.bannerImage && (
+      {/* {blog.bannerImage && (
         <div className={styles.banner}>
           <img
             src={`${API_BASE}/${blog.bannerImage}`}
@@ -51,11 +51,11 @@ export default function BlogDetailPage() {
             className={styles.image}
           />
         </div>
-      )}
+      )} */}
 
      <div className={styles.pageLayout}>
   {/* LEFT STICKY FORM */}
-  <aside className={styles.stickyForm}>
+  {/* <aside className={styles.stickyForm}>
     <h3>Get a Free Consultation</h3>
 
     <form className={styles.form}>
@@ -65,7 +65,7 @@ export default function BlogDetailPage() {
       <textarea placeholder="Your Requirement" rows="4"></textarea>
       <button type="submit">Submit</button>
     </form>
-  </aside>
+  </aside> */}
 
   {/* RIGHT BLOG CONTENT */}
   <div className={styles.container}>

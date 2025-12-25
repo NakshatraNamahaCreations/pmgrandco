@@ -2,10 +2,10 @@
    TWO COLUMN LAYOUT
 ========================= */
 .pageLayout {
-  max-width: 1280px;
-  margin:  50px auto;
+  max-width: 1520px;
+  margin:  0px auto;
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 1fr;
   gap: 32px;
   padding: 0 20px;
 }
@@ -107,8 +107,8 @@
    MAIN CONTENT CONTAINER
 ========================= */
 .container {
-  max-width: 980px;
-  margin:  50px 0;
+  max-width: 1170px;
+  margin:  50px auto;
   background: #ffffff;
   padding: 56px 64px;
   border-radius: 22px;

@@ -283,9 +283,9 @@ const ServicePortfolioCarousel = () => {
                     {service.subtitle}
                   </p> */}
 
-                  <div className="svc-card-arrow" aria-hidden>
+                  {/* <div className="svc-card-arrow" aria-hidden>
                     <FaArrowRight />
-                  </div>
+                  </div> */}
                 </article>
               </div>
             ))}

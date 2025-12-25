@@ -214,6 +214,7 @@
 // }
 
 
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import "./teamList.css";
 
 export default function TeamList() {
@@ -222,123 +223,25 @@ export default function TeamList() {
       <div className="biography-container">
         <h2>Our Leadership Team</h2>
 
-        {/* MEMBER 1 */}
-        <article className="editorial-row">
-          <aside className="editorial-media">
-            <img src="/images/Mithuna.jpg" alt="Mithuna D V" />
-            <div className="meta">
-              <span>DOJ: Nov 2022</span>
-              <span>Coimbatore, Tamil Nadu</span>
-            </div>
-          </aside>
-
-          <div className="editorial-content">
-            <h3>Mithuna D V</h3>
-            <p className="designation">ACA, Bachelor of Commerce</p>
-
-            <p>
-              Mithuna supports businesses with structured tax compliance,
-              financial planning, and documentation-driven processes. She works
-              closely with organizations to build clarity in filings, strengthen
-              planning routines, and establish reliable financial workflows that
-              improve day-to-day decision-making.
-            </p>
-
-            <h4>Area of Focus</h4>
-            <ul>
-              <li>Income Tax and GST compliance execution</li>
-              <li>Projected financial statements and business planning</li>
-              <li>Budgeting and operational optimization</li>
-              <li>Documentation structure & bookkeeping frameworks</li>
-            </ul>
-          </div>
-        </article>
-
-        <hr />
-
-        {/* MEMBER 2 */}
-        <article className="editorial-row reverse">
-          <aside className="editorial-media">
-            <img src="/images/Vaibhav.JPG" alt="Sri Vaibhav V" />
-            <div className="meta">
-              <span>DOJ: Jan 2026</span>
-              <span>Coimbatore, Tamil Nadu</span>
-            </div>
-          </aside>
-
-          <div className="editorial-content">
-            <h3>Sri Vaibhav V</h3>
-            <p className="designation">ACA</p>
-
-            <p>
-              Vaibhav works with organizations to strengthen governance, internal
-              controls, and financial operations. With experience in
-              multinational and Fortune 500 environments, he brings a
-              systems-driven perspective to controllership, SOX compliance, and
-              process excellence.
-            </p>
-
-            <h4>Area of Focus</h4>
-            <ul>
-              <li>Controllership & financial close</li>
-              <li>SOX compliance & internal control frameworks</li>
-              <li>Internal, process & management audits</li>
-              <li>Process optimization & continuous improvement</li>
-              <li>Financial automation & workflow enhancement</li>
-            </ul>
-          </div>
-        </article>
-
-        <hr />
-
-        {/* MEMBER 3 */}
-        <article className="editorial-row">
-          <aside className="editorial-media">
-            <img src="/images/Rahul.png" alt="Rahul R M" />
-            <div className="meta">
-              <span>DOJ: Nov 2022</span>
-              <span>Sulur (Coimbatore)</span>
-            </div>
-          </aside>
-
-          <div className="editorial-content">
-            <h3>Rahul R M</h3>
-            <p className="designation">ACA, Bachelor of Commerce</p>
-
-            <p>
-              Rahul specialises in litigation support, forensic reviews, PSU
-              audits, and risk-focused assignments. With experience across
-              direct and indirect tax representations, High Court drafting
-              support, and UAE financial reporting, he brings a practical,
-              investigation-ready perspective to complex engagements.
-            </p>
-
-            <h4>Area of Focus</h4>
-            <ul>
-              <li>Forensic audits & fraud risk reviews</li>
-              <li>GST appeals & litigation support</li>
-              <li>Direct tax representation & assessments</li>
-              <li>PSU, concurrent & process audits</li>
-              <li>UAE bookkeeping & MIS reporting</li>
-            </ul>
-          </div>
-        </article>
-
-        <hr />
 
         {/* MEMBER 4 */}
-        <article className="editorial-row reverse">
+        <article className="editorial-row">
           <aside className="editorial-media">
-            <img src="/images/Pramoth.jpg" alt="Pramoth P" />
+            <img src="/images/Pramoth1.jpg" alt="Pramoth P" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Pazhani, Tamil Nadu</span>
+               <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
             </div>
           </aside>
 
           <div className="editorial-content">
             <h3>Pramoth P</h3>
-            <p className="designation">ACA, Bachelor of Commerce</p>
+            <p className="designation">Associate Chartered Accountant, Bachelor of Commerce</p>
 
             <p>
               Pramoth works with organisations across geographies to enhance
@@ -348,7 +251,7 @@ export default function TeamList() {
               build scalable processes and strengthen financial visibility.
             </p>
 
-            <h4>Area of Focus</h4>
+            <h4>Areas of Focus</h4>
             <ul>
               <li>International bookkeeping (Singapore, Malaysia & Middle East)</li>
               <li>Business valuation & strategic decision support</li>
@@ -362,28 +265,72 @@ export default function TeamList() {
 
         <hr />
 
-        {/* MEMBER 5 */}
+        {/* MEMBER 1 */}
+        <article className="editorial-row reverse">
+          <aside className="editorial-media">
+            <img src="/images/Mithuna.jpg" alt="Mithuna D V" />
+            <div className="meta">
+              <span>DOJ: Nov 2022</span>
+              <span>Coimbatore, Tamil Nadu</span>
+               <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
+            </div>
+          </aside>
+
+          <div className="editorial-content">
+            <h3>Mithuna D V</h3>
+            <p className="designation">Associate Chartered Accountant, Bachelor of Commerce</p>
+
+            <p>
+              Mithuna supports businesses with structured tax compliance,
+              financial planning, and documentation-driven processes. She works
+              closely with organizations to build clarity in filings, strengthen
+              planning routines, and establish reliable financial workflows that
+              improve day-to-day decision-making.
+            </p>
+
+            <h4>Areas of Focus</h4>
+            <ul>
+              <li>Income Tax and GST compliance execution</li>
+              <li>Projected financial statements and business planning</li>
+              <li>Budgeting and operational optimization</li>
+              <li>Documentation structure & bookkeeping frameworks</li>
+            </ul>
+          </div>
+        </article>
+
+        <hr />
+
+           {/* MEMBER 5 */}
         <article className="editorial-row">
           <aside className="editorial-media">
             <img src="/images/Gowshika.jpg" alt="Gowshika T" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Salem, Tamil Nadu</span>
+               <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
             </div>
           </aside>
 
           <div className="editorial-content">
-            <h3>Gowshika T</h3>
-            <p className="designation">ACA, Bachelor of Commerce</p>
+            <h3>Gowshikha T</h3>
+            <p className="designation">Associate Chartered Accountant, Bachelor of Commerce</p>
 
             <p>
-              Gowshika brings four years of experience in audit, taxation,
+              Gowshikha brings four years of experience in audit, taxation,
               compliance, and specialised documentation work. She delivers
               structured, detail-oriented support for statutory requirements,
               fund-raising documentation, and forensic assignments.
             </p>
 
-            <h4>Area of Focus</h4>
+            <h4>Areas of Focus</h4>
             <ul>
               <li>Statutory, tax & bank audits</li>
               <li>Transfer pricing compliance</li>
@@ -396,19 +343,68 @@ export default function TeamList() {
 
         <hr />
 
-        {/* MEMBER 6 */}
+
+            {/* MEMBER 3 */}
         <article className="editorial-row reverse">
+          <aside className="editorial-media">
+            <img src="/images/Rahul1.png" alt="Rahul R M" />
+            <div className="meta">
+              <span>DOJ: Nov 2022</span>
+                 <span>Sulur (Coimbatore)</span>
+              <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
+
+           
+            </div>
+          </aside>
+
+          <div className="editorial-content">
+            <h3>Rahul R M</h3>
+            <p className="designation">Associate Chartered Accountant, Bachelor of Commerce</p>
+
+            <p>
+              Rahul specialises in litigation support, forensic reviews, PSU
+              audits, and risk-focused assignments. With experience across
+              direct and indirect tax representations, High Court drafting
+              support, and UAE financial reporting, he brings a practical,
+              investigation-ready perspective to complex engagements.
+            </p>
+
+            <h4>Areas of Focus</h4>
+            <ul>
+              <li>Forensic audits & fraud risk reviews</li>
+              <li>GST appeals & litigation support</li>
+              <li>Direct tax representation & assessments</li>
+              <li>PSU, concurrent & process audits</li>
+              <li>UAE bookkeeping & MIS reporting</li>
+            </ul>
+          </div>
+        </article>
+
+        <hr />
+
+
+          {/* MEMBER 6 */}
+        <article className="editorial-row">
           <aside className="editorial-media">
             <img src="/images/Gowri.jpg" alt="Gowrinitharshna C" />
             <div className="meta">
               <span>DOJ: Jan 2026</span>
               <span>Tiruppur, Tamil Nadu</span>
+               <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
             </div>
           </aside>
 
           <div className="editorial-content">
             <h3>Gowrinitharshna C</h3>
-            <p className="designation">ACA</p>
+            <p className="designation">Associate Chartered Accountant</p>
 
             <p>
               Gowri has experience across risk-focused audits, compliance
@@ -418,13 +414,53 @@ export default function TeamList() {
               structured processes that support sustainable growth.
             </p>
 
-            <h4>Area of Focus</h4>
+            <h4>Areas of Focus</h4>
             <ul>
               <li>Risk-based audits & systems evaluations</li>
               <li>Compliance framework design</li>
               <li>Internal control testing</li>
               <li>Financial planning & structured advisory</li>
               <li>Multi-sector experience</li>
+            </ul>
+          </div>
+        </article>
+
+        <hr/>
+
+        {/* MEMBER 2 */}
+        <article className="editorial-row reverse">
+          <aside className="editorial-media">
+            <img src="/images/Vaibhav.JPG" alt="Sri Vaibhav V" />
+            <div className="meta">
+              <span>DOJ: Jan 2026</span>
+              <span>Coimbatore, Tamil Nadu</span>
+               <span className="iconWrap">
+  <FaLinkedin />
+  <FaPhoneAlt />
+  <FaEnvelope />
+</span>
+            </div>
+          </aside>
+
+          <div className="editorial-content">
+            <h3>Sri Vaibhav V</h3>
+            <p className="designation">Associate Chartered Accountant</p>
+
+            <p>
+              Vaibhav works with organizations to strengthen governance, internal
+              controls, and financial operations. With experience in
+              multinational and Fortune 500 environments, he brings a
+              systems-driven perspective to controllership, SOX compliance, and
+              process excellence.
+            </p>
+
+            <h4>Areas of Focus</h4>
+            <ul>
+              <li>Controllership & financial close</li>
+              <li>SOX compliance & internal control frameworks</li>
+              <li>Interna l, process & management audits</li>
+              <li>Process optimization & continuous improvement</li>
+              <li>Financial automation & workflow enhancement</li>
             </ul>
           </div>
         </article>
