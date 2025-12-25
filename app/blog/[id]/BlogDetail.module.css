@@ -1,3 +1,37 @@
+/* ===============================
+   BREADCRUMB
+================================ */
+.breadcrumb {
+  max-width: 1170px;
+  margin: 0px auto 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  background-color: #175887;
+  
+}
+
+.breadcrumb a {
+  color: #fff; /* premium gold */
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  color: #999;
+  margin-top: 0px;
+}
+
+
+
 /* =========================
    TWO COLUMN LAYOUT
 ========================= */

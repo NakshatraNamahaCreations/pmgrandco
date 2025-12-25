@@ -43,6 +43,12 @@ export default function BlogDetailPage() {
     <>
     <HomePage/>
     <section className={styles.wrapper}>
+       {/* BREADCRUMB */}
+  <nav className={styles.breadcrumb}>
+    <a href="/">Home</a>
+    <span className={styles.separator}>›</span>
+    <a href="/insights">Insights</a>
+  </nav>
       {/* {blog.bannerImage && (
         <div className={styles.banner}>
           <img
