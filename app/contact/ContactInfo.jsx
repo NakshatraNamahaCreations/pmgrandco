@@ -175,8 +175,9 @@ export default function ContactPage() {
             <h3>Office Hours</h3>
             <p>10 AM – 6 PM (Monday – Saturdays)</p>
           </aside> */}
-
+  <h2 className="branches-heading">Head Office</h2>
 <div className="sol-cards">
+
           <article className="sol-card" data-aos="fade-right">
             <div className="sol-icon">
               <FaBuilding className="sol-react-icon" />
@@ -222,7 +223,7 @@ export default function ContactPage() {
 
         {/* LOCATIONS */}
   <section className="branches-section">
-  <h2 className="branches-heading">Head Office</h2>
+  <h2 className="branches-heading">Our Other Branches</h2>
 
  <div className="solutions-cards">
   {[
