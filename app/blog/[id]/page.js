@@ -6,6 +6,8 @@ import styles from "./BlogDetail.module.css";
 import { FaChevronDown } from "react-icons/fa";
 import Footer from "../../Home/Footer"
 import HomePage from "../../Home/HomePage"
+import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
 
 const API_BASE = "https://pmgrbackend.onrender.com";
 
@@ -43,12 +45,11 @@ export default function BlogDetailPage() {
     <>
     <HomePage/>
     <section className={styles.wrapper}>
-       {/* BREADCRUMB */}
-  <nav className={styles.breadcrumb}>
-    <a href="/">Home</a>
-    <span className={styles.separator}>›</span>
-    <a href="/insights">Insights</a>
-  </nav>
+ 
+<Link href="/insights" className={styles.backBtn}>
+  <FaArrowLeft size={18} />
+  Back to Insights
+</Link>
       {/* {blog.bannerImage && (
         <div className={styles.banner}>
           <img
