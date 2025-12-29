@@ -188,7 +188,8 @@ export default function ContactPage() {
   <div className="mapSection">
   {/* GOOGLE MAP LINK */}
   <a
-  href="https://www.google.com/maps?q=11.019733989144209,76.95125207486058"
+ // href="https://www.google.com/maps?q=11.019733989144209,76.95125207486058"
+ href="https://maps.app.goo.gl/qgKdo3XkGqdDYAVH9"
   target="_blank"
   rel="noopener noreferrer"
   className="mapLink"
@@ -234,7 +235,7 @@ export default function ContactPage() {
         "7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402",
       phones: ["+91 97912 35452", "+91 80723 92668"],
       email: "partner3@email.com",
-      mapLink: "https://maps.google.com/?q=11.025943,77.124023"
+      mapLink: "https://maps.app.goo.gl/Cepio2FwnMq7s8Mh9"
     },
     {
       city: "Palani",
@@ -242,7 +243,7 @@ export default function ContactPage() {
       address: "2/249, Midapadi, M.N. Patti Post, Palani – 624618",
       phone: "+91 88386 67049",
       email: "partner4@email.com",
-      mapLink: "https://maps.google.com/?q=10.585130,77.402440"
+      mapLink: "https://maps.app.goo.gl/vNu13aC87uqzPwps9"
     },
     {
       city: "Salem",
@@ -251,7 +252,7 @@ export default function ContactPage() {
         "40/16E, Sankar Nagar, Old Eye Care Hospital Road – 636007",
       phone: "+91 73390 49957",
       email: "partner5@email.com",
-      mapLink: "https://maps.google.com/?q=11.6651300,78.1526790"
+      mapLink: "https://maps.app.goo.gl/H2m7MPoZEUE3PHcDA"
     },
     {
       city: "Tiruppur",
@@ -259,7 +260,7 @@ export default function ContactPage() {
       address: "4/41, CK's Aishwaryam, Palladam Road – 641605",
       phone: "+91 99439 66077",
       email: "partner6@email.com",
-      mapLink: "https://maps.google.com/?q=11.0789970,77.3418750"
+      mapLink: "https://maps.app.goo.gl/9rkchQJ8n2YqevxN9"
     }
   ].map((loc, i) => (
     <article key={i} className="solutions-card">
