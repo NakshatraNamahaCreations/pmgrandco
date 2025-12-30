@@ -212,7 +212,7 @@ export default function TeamList() {
         {/* ================= MEMBER 4 ================= */}
         <article className="editorial-row reverse">
           <aside className="editorial-media">
-            <img src="/images/Rahul1.png" alt="Rahul R M" />
+            <img src="/images/Rahul3.png" alt="Rahul R M" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
               <span>Sulur, Coimbatore</span>
