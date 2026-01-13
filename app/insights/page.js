@@ -89,7 +89,7 @@ export default async function BlogPage() {
 
   try {
     const res = await fetch(`${API_URL}/api/blogs`, {
-      cache: "no-store", // always fresh (or "force-cache")
+       cache: "force-cache",// always fresh (or "force-cache")
     });
 
     const data = await res.json();
