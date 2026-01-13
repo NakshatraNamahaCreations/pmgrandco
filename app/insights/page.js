@@ -82,7 +82,7 @@ import HomePage from "../Home/HomePage";
 import InsightsBanner from "./InsightsBanner";
 import Footer from "../Home/Footer";
 
-const API_URL = "https://pmgrbackend.onrender.com";
+const API_URL = "https://api.pmgrandco.com";
 
 export default async function BlogPage() {
   let blogs = [];
