@@ -37,7 +37,7 @@ const HomePage = () => {
             />
             <div className="logo-text">
               <span className="main-title">PMGR & Co</span>
-              <span className="sub-title">Chartered Accountant</span>
+              <span className="sub-title">Chartered Accountants</span>
             </div>
           </Link>
 
