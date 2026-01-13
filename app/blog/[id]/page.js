@@ -7,9 +7,12 @@ import { FaChevronDown } from "react-icons/fa";
 
 const API_BASE = "https://api.pmgrandco.com";
 
-/* ✅ Required for static export */
+/* ✅ REQUIRED for static export */
 export async function generateStaticParams() {
-  const res = await fetch(`${API_BASE}/api/blogs`);
+  const res = await fetch(`${API_BASE}/api/blogs`, {
+    cache: "force-cache", // ✅ build-time only
+  });
+
   const data = await res.json();
 
   return data.blogs.map((blog) => ({
@@ -17,13 +20,17 @@ export async function generateStaticParams() {
   }));
 }
 
-/* ✅ Server Component */
-export default async function BlogDetailPage(props) {
-  const params = await props.params; // ✅ FIX
+/* ✅ STATIC Server Component */
+export default async function BlogDetailPage({ params }) {
   const blogId = params.id;
 
-  const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`);
+  const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
+    cache: "force-cache", // ✅ REQUIRED for next export
+  });
 
+  if (!res.ok) {
+    return <div style={{ padding: 40 }}>Blog not found</div>;
+  }
 
   const data = await res.json();
   const blog = data?.blog;
