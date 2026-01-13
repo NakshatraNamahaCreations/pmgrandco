@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
 
-const API_BASE = "https://pmgrbackend.onrender.com";
+const API_BASE = "https://api.pmgrandco.com";
 
 /* ✅ Required for static export */
 export async function generateStaticParams() {
@@ -22,9 +22,8 @@ export default async function BlogDetailPage(props) {
   const params = await props.params; // ✅ FIX
   const blogId = params.id;
 
-  const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
-    cache: "force-cache",
-  });
+  const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`);
+
 
   const data = await res.json();
   const blog = data?.blog;
