@@ -7,36 +7,56 @@ import { FaChevronDown } from "react-icons/fa";
 
 const API_BASE = "https://api.pmgrandco.com";
 
-/* ✅ REQUIRED for static export */
+/* ✅ REQUIRED: generate all blog routes at BUILD time */
 export async function generateStaticParams() {
   const res = await fetch(`${API_BASE}/api/blogs`, {
-    cache: "force-cache", // ✅ build-time only
+    cache: "force-cache",
+    headers: {
+      "Accept": "application/json",
+      "User-Agent": "Mozilla/5.0 (Next.js static export)",
+    },
   });
+
+  if (!res.ok) {
+    return [];
+  }
 
   const data = await res.json();
 
-  return data.blogs.map((blog) => ({
+  return (data.blogs || []).map((blog) => ({
     id: blog._id.toString(),
   }));
 }
 
-/* ✅ STATIC Server Component */
+/* ✅ STATIC Server Component (export compatible) */
 export default async function BlogDetailPage({ params }) {
   const blogId = params.id;
 
   const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
-    cache: "force-cache", // ✅ REQUIRED for next export
+    cache: "force-cache",
+    headers: {
+      "Accept": "application/json",
+      "User-Agent": "Mozilla/5.0 (Next.js static export)",
+    },
   });
 
   if (!res.ok) {
-    return <div style={{ padding: 40 }}>Blog not found</div>;
+    return (
+      <div style={{ padding: 40 }}>
+        <h2>Blog not available</h2>
+      </div>
+    );
   }
 
   const data = await res.json();
   const blog = data?.blog;
 
   if (!blog) {
-    return <div style={{ padding: 40 }}>Blog not found</div>;
+    return (
+      <div style={{ padding: 40 }}>
+        <h2>Blog not available</h2>
+      </div>
+    );
   }
 
   return (
@@ -63,8 +83,8 @@ export default async function BlogDetailPage({ params }) {
               <section className={styles.faqSection}>
                 <h2>Frequently Asked Questions</h2>
 
-                {blog.faqs.map((faq, index) => (
-                  <details key={index} className={styles.faqItem}>
+                {blog.faqs.map((faq) => (
+                  <details key={faq._id} className={styles.faqItem}>
                     <summary className={styles.faqQuestion}>
                       {faq.question}
                       <FaChevronDown />
