@@ -36,7 +36,7 @@ const HomePage = () => {
               alt="logo"
             />
             <div className="logo-text">
-              <span className="main-title">VS Vaibhav & Co</span>
+              <span className="main-title">PMGR & Co</span>
               <span className="sub-title">Chartered Accountant</span>
             </div>
           </Link>
