@@ -1,16 +1,11 @@
 // next.config.ts
+import { NextConfig } from "next";
 
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // output: "export",
-      // IMPORTANT !!
-  // images: {
-  //   unoptimized: true,
-  // },
-  trailingSlash: true, 
+const nextConfig = {
+  output: "export",          // ✅ static HTML
+  trailingSlash: true,       // ✅ required for static routing
   images: {
-    domains: ["pmgrbackend.onrender.com"],
+    unoptimized: true,       // ✅ required for static export
   },
 };
 
