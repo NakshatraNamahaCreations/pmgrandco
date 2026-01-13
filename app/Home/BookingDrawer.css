@@ -102,3 +102,10 @@
 .drawer-submit:hover {
   background: #1e40af;
 }
+
+@media (max-width: 768px) {
+  .drawer-overlay{
+    margin-top: 80px;
+    inset: 5px;
+  }
+}

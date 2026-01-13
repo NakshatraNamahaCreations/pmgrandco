@@ -88,7 +88,7 @@ html, body{
 /* Responsive tweak */
 @media (max-width: 768px) {
   .solutions-title {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     gap: 12px;
   }
 
@@ -333,6 +333,7 @@ html, body{
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
 .hero-feature-btn:hover {
@@ -342,23 +343,57 @@ html, body{
   color: #fff;
 }
 
+a{
+  text-decoration: none !important;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero-feature-box {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    padding: 28px 20px;
+    border-radius: 16px;
     flex-direction: column;
-    text-align: center;
-    padding: 35px 30px;
+    gap: 22px;
   }
 
   .hero-feature-services {
-    flex-direction: column;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .hero-feature-service-box {
     width: 100%;
+    padding: 20px 16px;
+  }
+
+  .hero-feature-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero-feature-service-box p {
+    font-size: 14px;
+    margin-top: -20px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-feature-services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-feature-service-box {
+    padding: 18px 14px;
+    height: 150px;
+  }
+}
+
 
 
 
@@ -380,6 +415,6 @@ html, body{
   }
 
   .solutions-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }

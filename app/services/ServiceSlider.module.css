@@ -106,19 +106,78 @@
 /* =========================
    MOBILE
 ========================= */
+/* =========================
+   MOBILE TABS – FULL BLEED FIX
+========================= */
+/* =========================
+   MOBILE TABS – FIX LEFT SCROLL LOCK
+========================= */
 @media (max-width: 900px) {
   .tabs {
-    overflow-x: auto;
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+
+    display: flex;
     flex-wrap: nowrap;
-    scrollbar-width: none;
+    align-items: center;
+
+    /* 🔥 DO NOT CENTER */
+    justify-content: flex-start;
+
+    /* 🔥 CRITICAL */
+    width: 100vw;
+    max-width: 100vw;
+
+    /* 🔥 REAL SCROLL START */
+    padding: 10px 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /* 🔥 KEY FIX */
+    scroll-padding-left: 16px;
   }
 
+  /* Hide scrollbar */
   .tabs::-webkit-scrollbar {
     display: none;
   }
 
   .tab {
     flex: 0 0 auto;
+    min-width: max-content;
     white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+    border-radius: 12px;
+
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 🔥 LEFT & RIGHT SCROLL BUFFERS */
+  .tabs::before,
+  .tabs::after {
+    content: "";
+    flex: 0 0 16px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .wrapper{
+    padding: 20px 10px;
   }
 }

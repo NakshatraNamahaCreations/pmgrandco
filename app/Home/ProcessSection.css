@@ -212,6 +212,7 @@
 
 .pf-step-desc {
   font-size: 0.85rem;
+  color: #444;
 }
 
 /* Hover effects */
@@ -297,5 +298,88 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+/* Tablet & below */
+@media (max-width: 900px) {
+  .pf-section {
+    padding: 0 16px 64px;
+  }
+
+  .pf-inner {
+    padding: 24px 18px 32px;
+  }
+
+  .pf-header {
+    margin-bottom: 28px;
+  }
+
+  .pf-title {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+
+  .pf-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Steps become stacked cards */
+  .pf-step {
+    max-width: 100%;
+  }
+
+  .pf-step-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 14px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  }
+
+  .pf-step-label {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .pf-step-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-title {
+    font-size: 1.5rem;
+  }
+
+  .pf-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .pf-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .pf-step-icon {
+    font-size: 1.25rem;
+  }
+
+  .pf-step-number-inside {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .pf-step-inner {
+    gap: 12px;
+    padding: 12px;
   }
 }

@@ -87,3 +87,11 @@
   transform: translateX(100%);
 }
 
+/* =====================
+   HIDE FLOATING BUTTON ON MOBILE
+===================== */
+@media (max-width: 768px) {
+  .vertical-consult-btn {
+    display: none !important;
+  }
+}

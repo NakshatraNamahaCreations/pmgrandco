@@ -1,70 +1,106 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
-import "./Header.css"
-import { FaClock, FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaPhoneAlt, FaTwitter } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import "./Header.css";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaTimes,
+} from "react-icons/fa";
 import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => setIsOpen(false);
+
+  // Lock scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
   return (
-    <header className="header">
-      {/* Top info bar */}
-    {/*}  <div className="top-bar">
-        <div className="top-bar-left">
-          <span><FaLocationArrow/> 254 Street Avenue, Los Angeles, LA 2415 US</span>
-          <span><FaClock/> Mon - Fri : 09:00 - 17:00</span>
-          <span><FaPhoneAlt/> 9765432108</span>
+    <>
+      {isOpen && <div className="menu-overlay" onClick={closeMenu} />}
+
+      <header className="header">
+        <nav className="nav">
+          {/* LOGO */}
+          <div className="nav-logo">
+            <Image
+              src="/images/CA-India-logo.png"
+              width={70}
+              height={50}
+              alt="logo"
+            />
+            <div className="logo-text">
+              <span className="main-title">VS Vaibhav & Co</span>
+              <span className="sub-title">Chartered Accountant</span>
+            </div>
+          </div>
+
+          {/* DESKTOP MENU */}
+          <div className="nav-links">
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/contact">Contact Us</Link>
+          </div>
+
+          {/* DESKTOP SOCIALS */}
+          <div className="nav-socials">
+            <a href="#"><FaFacebook /></a>
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
+          </div>
+
+          {/* HAMBURGER (MOBILE ONLY) */}
+          <button
+            className="nav-toggle"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </nav>
+      </header>
+
+      {/* MOBILE SLIDE DRAWER */}
+      <aside className={`mobile-drawer ${isOpen ? "open" : ""}`}>
+        <div className="drawer-header">
+          <Image
+            src="/images/CA-India-logo.png"
+            width={60}
+            height={45}
+            alt="logo"
+          />
+          <button className="close-btn" onClick={closeMenu}>
+            <FaTimes />
+          </button>
         </div>
-       
-      </div>*/}
 
-      {/* Main navbar */}
-      <nav className="nav">
-       <div className="nav-logo">
-    <Image 
-        src="/images/CA-India-logo.png" 
-        width={80} 
-        height={60} 
-        alt="logo"
-        className="logo-img"
-    />
+        <nav className="drawer-links">
+          <Link href="/" onClick={closeMenu}>Home</Link>
+          <Link href="/about" onClick={closeMenu}>About Us</Link>
+          <Link href="/services" onClick={closeMenu}>Services</Link>
+          <Link href="/blog" onClick={closeMenu}>Blog</Link>
+          <Link href="/contact" onClick={closeMenu}>Contact Us</Link>
+        </nav>
 
-    <div className="logo-text">
-        <span className="main-title">VS Vaibhav & Co</span>
-        <span className="sub-title">Chartered Accountant</span>
-    </div>
-</div>
-
-
-        <button
-          className="nav-toggle"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle navigation"
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-
-        <div className={`nav-links ${isOpen ? "open" : ""}`}>
-          <Link href="#/" className="nav-link">Home</Link>
-          <Link href="#about" className="nav-link">About Us</Link>
-          <Link href="#services" className="nav-link">Services</Link>
-          <Link href="#blog" className="nav-link">Blog</Link>
-          <Link href="#contact" className="nav-link">Contact Us</Link>
+        <div className="drawer-socials">
+          <a href="#"><FaFacebook /></a>
+          <a href="#"><FaTwitter /></a>
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaLinkedin /></a>
         </div>
-
-        <div className="nav-socials">
-          <a href="#" aria-label="Facebook"><FaFacebook/></a>
-          <a href="#" aria-label="Twitter"><FaTwitter/></a>
-          <a href="#" aria-label="Google+"><FaInstagram/></a>
-          <a href="#" aria-label="LinkedIn"><FaLinkedin/></a>
-          
-        </div>
-      </nav>
-    </header>
+      </aside>
+    </>
   );
 };
 

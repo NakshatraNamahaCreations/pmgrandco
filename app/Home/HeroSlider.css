@@ -445,3 +445,43 @@
     opacity: 0.45;
   }
 }
+
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
+@media (max-width: 768px) {
+  .hh-action-bar {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 16px;
+
+
+  }
+
+  .hh-action-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 6px 10px !important;
+
+    font-size: 10px !important;
+    border-radius: 12px;
+  }
+
+  .hh-action-btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .hh-hero-slider{
+    margin: 0px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hh-action-btn {
+    font-size: 14px;
+    padding: 15px 16px;
+  }
+}

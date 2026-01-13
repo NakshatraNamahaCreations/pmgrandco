@@ -344,6 +344,10 @@
   .faqAnswer p {
     font-size: 15px;
   }
+
+  .breadcrumb{
+    margin: 120px auto 0;
+  }
 }
 
 
@@ -352,7 +356,7 @@
 ========================= */
 @media (max-width: 1024px) {
   .container {
-    margin-top: -90px;
+    margin-top: 90px;
     padding: 48px;
   }
 
@@ -367,7 +371,7 @@
   }
 
   .container {
-    margin-top: -70px;
+    margin-top: 70px;
     padding: 34px;
   }
 
@@ -382,11 +386,16 @@
   }
 
   .container {
-    margin-top: -50px;
+    margin-top: 80px;
     padding: 24px;
+    margin-bottom: 0px;
   }
 
   .title {
     font-size: 24px;
+  }
+
+  .wrapper{
+    padding-bottom: 0px;
   }
 }

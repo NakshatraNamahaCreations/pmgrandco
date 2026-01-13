@@ -23,3 +23,9 @@
 .scrollTopBtn:active {
   transform: scale(0.92);
 }
+
+@media (max-width: 768px) {
+  .scrollTopBtn {
+    right: 0px;
+  }
+}

@@ -351,4 +351,8 @@
   .shape-3 {
     display: none;
   }
+
+  .biz-text{
+    font-size: 14px;
+  }
 }

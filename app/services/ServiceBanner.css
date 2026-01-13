@@ -123,6 +123,7 @@
 @media (max-width: 768px) {
   .services-hero {
     padding: 60px 24px;
+    margin: 10px auto 0;
   }
 
   .services-title {
@@ -130,6 +131,6 @@
   }
 
   .services-description {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }

@@ -159,6 +159,7 @@ import { cfoData } from "./CfoData";
 import { CertificationsData } from "./CertificationsData";
 import SubServiceGrid from "./SubServiceSlider";
 
+/* ---------------- SERVICES ---------------- */
 const services = [
   { id: "direct-tax", label: "Direct Tax Advisory", icon: <FaBalanceScale /> },
   { id: "indirect-tax", label: "Indirect Tax & GST", icon: <FaGlobe /> },
@@ -186,20 +187,23 @@ const serviceDataMap = {
 export default function ServiceSlider() {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("direct-tax");
+
   const sectionRefs = useRef({});
+  const tabRefs = useRef({}); // 🔥 NEW: tab refs
 
   /* ---------- TAB CLICK ---------- */
   const handleTabClick = (id) => {
     setActiveTab(id);
+
     sectionRefs.current[id]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
 
-  /* ---------- SCROLL SPY (CORRECT) ---------- */
+  /* ---------- SCROLL SPY ---------- */
   useEffect(() => {
-    const OFFSET = 270; // MUST MATCH scroll-margin-top
+    const OFFSET = 270; // must match scroll-margin-top
 
     const handleScroll = () => {
       let current = null;
@@ -208,10 +212,9 @@ export default function ServiceSlider() {
         if (!section) continue;
 
         const rect = section.getBoundingClientRect();
-
         if (rect.top <= OFFSET && rect.bottom > OFFSET) {
           current = id;
-          break; // 🔥 first valid section wins
+          break;
         }
       }
 
@@ -226,6 +229,19 @@ export default function ServiceSlider() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /* ---------- AUTO-SCROLL ACTIVE TAB (🔥 KEY FIX) ---------- */
+  useEffect(() => {
+    const tab = tabRefs.current[activeTab];
+
+    if (tab && window.innerWidth <= 900) {
+      tab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [activeTab]);
+
   return (
     <section className={styles.wrapper}>
       {/* ---------- STICKY TABS ---------- */}
@@ -233,6 +249,7 @@ export default function ServiceSlider() {
         {services.map((s) => (
           <button
             key={s.id}
+            ref={(el) => (tabRefs.current[s.id] = el)} // 🔥 attach ref
             className={`${styles.tab} ${
               activeTab === s.id ? styles.tabActive : ""
             }`}

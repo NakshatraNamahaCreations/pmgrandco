@@ -555,8 +555,8 @@
 
 /* responsive nav button placement on small screens */
 @media (max-width: 600px) {
-  .svc-swiper-button-prev { left: 4px; }
-  .svc-swiper-button-next { right: 4px; }
+  .svc-swiper-button-prev { left: -15px; }
+  .svc-swiper-button-next { right: -15px; }
   .svc-swiper-button-prev,
   .svc-swiper-button-next { width: 36px; height: 36px; font-size: 1rem; }
 }

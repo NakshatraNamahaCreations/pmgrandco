@@ -394,3 +394,163 @@ hr {
     opacity: 1;
   }
 }
+
+/* =========================
+   TEAM LIST – MOBILE OPTIMIZATION
+========================= */
+
+/* Tablet & below */
+@media (max-width: 1024px) {
+  .biography-section {
+    padding: 60px 16px;
+  }
+
+  .biography-container h2 {
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .editorial-row {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .editorial-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-media img {
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+  /* Meta info becomes inline card */
+  .editorial-media .meta {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 14px;
+
+    background: #175885;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    font-size: 0.75rem;
+  }
+
+  .iconWrap {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .iconWrap svg {
+    font-size: 16px;
+  }
+
+  .editorial-content {
+    padding-top: 0;
+  }
+
+  .editorial-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .designation {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  .editorial-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .editorial-content h4,
+  .focus-heading {
+    font-size: 0.9rem;
+    margin-top: 24px;
+  }
+
+  .editorial-content ul {
+    padding-left: 16px;
+  }
+
+  hr {
+    margin: 70px 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .biography-section {
+    padding: 50px 14px;
+  }
+
+  .biography-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .editorial-media img {
+    max-height: 260px;
+  }
+
+  .editorial-media .meta {
+    font-size: 0.72rem;
+    padding: 10px 12px;
+  }
+
+  .iconWrap {
+    gap: 10px;
+  }
+
+  .editorial-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .editorial-content p {
+    font-size: 0.92rem;
+  }
+
+  /* Popup mobile fit */
+  .popupBox {
+    padding: 22px 20px;
+    max-width: 92%;
+  }
+
+  .popupBox h3 {
+    font-size: 18px;
+  }
+
+  .popupBox strong {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   MOBILE – REMOVE REVERSE LAYOUT
+========================= */
+@media (max-width: 1024px) {
+  /* Force all rows to behave the same */
+  .editorial-row,
+  .editorial-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reset ordering so media always comes first */
+  .editorial-row.reverse .editorial-media {
+    order: 0;
+  }
+
+  .editorial-row.reverse .editorial-content {
+    order: 1;
+  }
+}

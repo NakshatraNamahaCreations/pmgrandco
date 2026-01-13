@@ -625,7 +625,7 @@
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: rgba(23, 88, 135, 0.12);
+  background: #175885;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -641,6 +641,10 @@
   font-weight: 700;
   color: #0f172a;
   margin: 0;
+}
+
+.solutions-card p{
+  color: #444;
 }
 
 /* ======================================================
@@ -840,5 +844,106 @@
   .sol-cards {
     flex-direction: column;
     gap: 24px;
+  }
+}
+
+/* =========================
+   OTHER BRANCHES – MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 900px) {
+  .branches-section {
+    margin-top: 80px;
+    padding: 0 8px;
+  }
+
+  .branches-heading {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+  }
+
+  /* Timeline container */
+  .solutions-cards {
+    padding-left: 28px;
+  }
+
+  /* Vertical line moves to left */
+  .solutions-cards::before {
+    left: 14px;
+    transform: none;
+    width: 3px;
+  }
+
+  /* Card becomes full width */
+  .solutions-card {
+    width: 100%;
+    align-self: stretch;
+    text-align: left !important;
+
+    padding: 24px 24px 24px 36px;
+    border-radius: 18px;
+    margin-bottom: 32px;
+  }
+
+  /* Remove alternating behavior */
+  .solutions-card:nth-child(odd),
+  .solutions-card:nth-child(even) {
+    align-self: stretch;
+  }
+
+  /* Pin always on left */
+  .solutions-card::before {
+    left: -26px !important;
+    right: auto !important;
+    top: 32px;
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+  }
+
+  /* Header always normal order */
+  .solutions-card-header {
+    flex-direction: row !important;
+    gap: 12px;
+  }
+
+  .solutions-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .solutions-react-icon {
+    font-size: 20px;
+  }
+
+  .solutions-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .solutions-card p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  .contact-link {
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-top: 4px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .branches-heading {
+    font-size: 1.6rem;
+  }
+
+  .solutions-card {
+    padding: 22px 20px 22px 34px;
+  }
+
+  .solutions-card::before {
+    left: -24px !important;
   }
 }
