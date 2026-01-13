@@ -6,7 +6,7 @@ import styles from "./BlogCards.module.css";
 
 export default function BlogCards({ blog }) {
   const router = useRouter();
-  const IMAGE_BASE_URL = "https://pmgrbackend.onrender.com/";
+  const IMAGE_BASE_URL = "https://api.pmgrandco.com/";
 
   /* ================= HELPERS ================= */
   const stripHtml = (html) => {
