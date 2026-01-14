@@ -253,7 +253,10 @@ html, body{
 .hero-feature-service-box h6{
   font-size: 22px;
   font-weight: 600;
+  color: #444;
 }
+
+
 
 /* Left section */
 .hero-feature-left h3 {
@@ -379,7 +382,6 @@ a{
 
   .hero-feature-service-box p {
     font-size: 14px;
-    margin-top: -20px;
   }
 }
 

@@ -178,27 +178,57 @@ const ServicePortfolio = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  /* Slider settings (DESKTOP ONLY) */
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 400,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4200,
-    arrows: true,
-    swipe: true,
-    variableWidth: false,
-    centerMode: false,
+  const PrevArrow = ({ onClick }) => (
+  <button
+    type="button"
+    className="svc-swiper-button-prev"
+    onClick={onClick}
+    aria-label="Previous"
+  >
+    ‹
+  </button>
+);
 
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+const NextArrow = ({ onClick }) => (
+  <button
+    type="button"
+    className="svc-swiper-button-next"
+    onClick={onClick}
+    aria-label="Next"
+  >
+    ›
+  </button>
+);
+
+
+  /* Slider settings (DESKTOP ONLY) */
+ const settings = {
+  dots: false,
+  infinite: false,
+  speed: 400,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4200,
+
+  arrows: true,
+  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow />,
+
+  swipe: true,
+  variableWidth: false,
+  centerMode: false,
+
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
       },
-    ],
-  };
+    },
+  ],
+};
+
 
   /* Card JSX */
   const renderCard = (service) => (

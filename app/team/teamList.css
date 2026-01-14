@@ -506,10 +506,15 @@ hr {
   .editorial-media .meta {
     font-size: 0.72rem;
     padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
   .iconWrap {
     gap: 10px;
+    margin-top: -3px;
   }
 
   .editorial-content h3 {
