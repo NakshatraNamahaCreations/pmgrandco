@@ -84,13 +84,20 @@ import Footer from "../Home/Footer";
 
 const API_URL = "https://api.pmgrandco.com";
 
+/* Enable ISR */
+export const revalidate = 60;
+
 export default async function BlogPage() {
   let blogs = [];
 
   try {
     const res = await fetch(`${API_URL}/api/blogs`, {
-       cache: "force-cache",// always fresh (or "force-cache")
+      next: { revalidate: 60 }, // ISR (refresh every 60s)
     });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch blogs");
+    }
 
     const data = await res.json();
     blogs = data.blogs || [];
@@ -121,4 +128,3 @@ export default async function BlogPage() {
     </>
   );
 }
-

@@ -4,28 +4,27 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./BlogCards.module.css";
 
+const IMAGE_BASE_URL = "https://api.pmgrandco.com/";
+
 export default function BlogCards({ blog }) {
   const router = useRouter();
-  const IMAGE_BASE_URL = "https://api.pmgrandco.com/";
 
-  /* ================= HELPERS ================= */
+  /* ---------- HELPERS ---------- */
   const stripHtml = (html) => {
     if (!html) return "";
     return html.replace(/<[^>]*>/g, "").trim();
   };
 
-  /* ================= HANDLERS ================= */
+  /* ---------- HANDLERS ---------- */
   const handleReadMore = () => {
     if (blog.redirectLink && blog.redirectLink.startsWith("http")) {
-      // External redirect
       window.open(blog.redirectLink, "_blank", "noopener,noreferrer");
     } else {
-      // Internal blog detail page
       router.push(`/blog/${blog._id}`);
     }
   };
 
-  /* ================= UI ================= */
+  /* ---------- UI ---------- */
   return (
     <article className={styles.card}>
       {/* IMAGE */}
@@ -44,7 +43,6 @@ export default function BlogCards({ blog }) {
           fill
           className={styles.image}
           sizes="(max-width: 768px) 100vw, 33vw"
-          priority={false}
         />
       </div>
 
@@ -56,7 +54,6 @@ export default function BlogCards({ blog }) {
           {stripHtml(blog.description).slice(0, 150)}...
         </p>
 
-        {/* ✅ ALWAYS VISIBLE */}
         <button
           type="button"
           className={styles.btn}

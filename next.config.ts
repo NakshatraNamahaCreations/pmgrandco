@@ -2,7 +2,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",        // ✅ static export
+  // output: "export",        // ✅ static export
   trailingSlash: true,     // ✅ required for static routing
   images: {
     unoptimized: true,     // ✅ required for static export

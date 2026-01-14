@@ -5,54 +5,31 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
 
-
-
 const API_BASE = "https://api.pmgrandco.com";
 
-/* ✅ REQUIRED: generate all blog routes at BUILD time */
-export async function generateStaticParams() {
-  const res = await fetch(`${API_BASE}/api/blogs`, {
-    cache: "force-cache",
-    headers: {
-      "Accept": "application/json",
-      "User-Agent": "Mozilla/5.0 (Next.js static export)",
-    },
-  });
+/* ISR */
+export const revalidate = 60;
 
-  if (!res.ok) {
-    return [];
-  }
-
-  const data = await res.json();
-
-  return (data.blogs || []).map((blog) => ({
-    id: blog._id.toString(),
-  }));
-}
-
-/* ✅ STATIC Server Component (export compatible) */
 export default async function BlogDetailPage({ params }) {
-  const { id: blogId } = await params; // ✅ REQUIRED
+  // ✅ FIX: unwrap params
+  const { id: blogId } = await params;
 
+  let blog = null;
 
-  const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
-    cache: "force-cache",
-    headers: {
-      "Accept": "application/json",
-      "User-Agent": "Mozilla/5.0 (Next.js static export)",
-    },
-  });
+  try {
+    const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
+      next: { revalidate: 60 },
+    });
 
-  if (!res.ok) {
-    return (
-      <div style={{ padding: 40, color:"#444" }}>
-        <h2>Blog not available</h2>
-      </div>
-    );
+    if (!res.ok) {
+      throw new Error("Blog fetch failed");
+    }
+
+    const data = await res.json();
+    blog = data?.blog;
+  } catch (error) {
+    console.error("Blog fetch error:", error);
   }
-
-  const data = await res.json();
-  const blog = data?.blog;
 
   if (!blog) {
     return (
