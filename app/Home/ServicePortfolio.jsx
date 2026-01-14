@@ -124,13 +124,15 @@
 // export default ServicePortfolio;
 
 
+"use client";
 
-"use client"
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import "./ServicePortfolio.css"; 
+import "./ServicePortfolio.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
+
 import {
   FaBalanceScale,
   FaClipboardCheck,
@@ -140,92 +142,43 @@ import {
   FaFileAlt,
   FaHandsHelping,
   FaHeadphones,
-  FaArrowRight,
 } from "react-icons/fa";
 import { FaBarsProgress as FaBarsProgress6 } from "react-icons/fa6";
 
-// Services array (same as before)
+/* =========================
+   SERVICES DATA
+========================= */
 const services = [
-  {
-    title: "Income Tax",
-    subtitle: "Companies, Banks, Insurance, NIDHI Companies",
-    icon: <FaBalanceScale />,
-    tag: "Tax",
-  },
-  {
-    title: "Goods and Services Tax",
-    subtitle: "Comprehensive operational control assessments",
-    icon: <FaClipboardCheck />,
-    tag: "Tax",
-  },
-  {
-    title: "Audits and Assurance",
-    subtitle: "Section 44AB compliance and advisory",
-    icon: <FaFileInvoiceDollar />,
-    tag: "Audits",
-  },
-  {
-    title: "SOX & ICFR Compliance and Testing",
-    subtitle: "Sarbanes-Oxley compliance and testing",
-    icon: <FaFileAlt />,
-    tag: "Testing",
-  },
-  {
-    title: "Start up Support",
-    subtitle: "End-to-end operational process reviews",
-    icon: <FaProjectDiagram />,
-    tag: "Support",
-  },
-  {
-    title: "Virtual CFO Services",
-    subtitle: "Strategic and operational effectiveness audits",
-    icon: <FaChartLine />,
-    tag: "Services",
-  },
-  {
-    title: "Financial Operations Support(FOS)",
-    subtitle: "GST compliance, returns and representation",
-    icon: <FaHeadphones />,
-    tag: "Support",
-  },
-  {
-    title: "Business Analytics",
-    subtitle: "Financial planning, systems and compliance",
-    icon: <FaHandsHelping />,
-    tag: "Analytics",
-  },
-  {
-    title: "Projection, analysis & Certifications",
-    subtitle: "Financial planning, systems and compliance",
-    icon: <FaBarsProgress6 />,
-    tag: "Analytics",
-  },
+  { title: "Income Tax", icon: <FaBalanceScale />, tag: "Tax" },
+  { title: "Goods and Services Tax", icon: <FaClipboardCheck />, tag: "Tax" },
+  { title: "Audits and Assurance", icon: <FaFileInvoiceDollar />, tag: "Audits" },
+  { title: "SOX & ICFR Compliance and Testing", icon: <FaFileAlt />, tag: "Testing" },
+  { title: "Start up Support", icon: <FaProjectDiagram />, tag: "Support" },
+  { title: "Virtual CFO Services", icon: <FaChartLine />, tag: "Services" },
+  { title: "Financial Operations Support (FOS)", icon: <FaHeadphones />, tag: "Support" },
+  { title: "Business Analytics", icon: <FaHandsHelping />, tag: "Analytics" },
+  { title: "Projection, Analysis & Certifications", icon: <FaBarsProgress6 />, tag: "Analytics" },
 ];
 
-// Custom arrow components — these use the same CSS classes you already have
-const PrevArrow = ({ className, onClick }) => (
-  <button
-    type="button"
-    className="svc-swiper-button-prev"
-    onClick={onClick}
-    aria-label="Previous service"
-  >
-    ‹
-  </button>
-);
+/* =========================
+   MAIN COMPONENT
+========================= */
+const ServicePortfolio = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-const NextArrow = ({ className, onClick }) => (
-  <button
-    type="button"
-    className="svc-swiper-button-next"
-    onClick={onClick}
-    aria-label="Next service"
-  >
-    ›
-  </button>
-);
+  /* Detect mobile once & on resize */
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-const ServicePortfolioCarousel = () => {
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  /* Slider settings (DESKTOP ONLY) */
   const settings = {
     dots: false,
     infinite: false,
@@ -234,87 +187,67 @@ const ServicePortfolioCarousel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4200,
-    pauseOnHover: true,
     arrows: true,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-    accessibility: true,
-    draggable: true,
-    swipeToSlide: true,
+    swipe: true,
+    variableWidth: false,
+    centerMode: false,
+
     responsive: [
       {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-        },
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1
-        }
-      }
     ],
   };
 
+  /* Card JSX */
+  const renderCard = (service) => (
+    <article className="svc-card-simple" aria-label={service.title}>
+      <div className="svc-card-icon-wrap">
+        <div className="svc-card-icon">{service.icon}</div>
+      </div>
+      <span className="svc-card-tag">{service.tag}</span>
+      <h3 className="svc-card-title">{service.title}</h3>
+    </article>
+  );
+
   return (
-    <section className="svc-section" id="1">
+    <section className="svc-section" id="services">
       <div className="svc-inner">
-        <div className="svc-header" data-aos="fade-up">
+        <div className="svc-header">
           <p className="svc-kicker">Our Service Portfolio</p>
           <h2 className="svc-title">All your business needs under one roof</h2>
           <p className="svc-subtitle">
-            A focused suite of services designed to enhance governance, manage risk and support growth for businesses across sectors.
+            A focused suite of services designed to enhance governance, manage risk
+            and support growth for businesses across sectors.
           </p>
         </div>
 
-        <div className="svc-carousel-wrap" data-aos="fade-in">
-          <Slider {...settings}>
+        {/* ✅ MOBILE: NORMAL STACK */}
+        {isMobile ? (
+          <div className="svc-mobile-list">
             {services.map((service) => (
-              <div key={service.title} style={{ padding: "6px" }}>
-                <article className="svc-card-simple" aria-label={service.title}>
-                  <div className="svc-card-icon-wrap">
-                    <div className="svc-card-icon">{service.icon}</div>
-                  </div>
-
-                  <span className="svc-card-tag">{service.tag}</span>
-                  <h3 className="svc-card-title">{service.title}</h3>
-                  {/* <p className="svc-card-text" style={{ marginTop: 6, minHeight: 42 }}>
-                    {service.subtitle}
-                  </p> */}
-
-                  {/* <div className="svc-card-arrow" aria-hidden>
-                    <FaArrowRight />
-                  </div> */}
-                </article>
+              <div key={service.title} className="svc-mobile-item">
+                {renderCard(service)}
               </div>
             ))}
-          </Slider>
-        </div>
+          </div>
+        ) : (
+          /* ✅ DESKTOP: SLIDER */
+          <div className="svc-carousel-wrap">
+            <Slider {...settings}>
+              {services.map((service) => (
+                <div key={service.title}>{renderCard(service)}</div>
+              ))}
+            </Slider>
+          </div>
+        )}
 
-        <div className="svc-actions" data-aos="fade-up">
+        <div className="svc-actions">
           <Link href="/services">
-          <button type="button" className="svc-view-all-btn">
-            View all services
-          </button>
+            <button type="button" className="svc-view-all-btn">
+              View all services
+            </button>
           </Link>
         </div>
       </div>
@@ -322,4 +255,4 @@ const ServicePortfolioCarousel = () => {
   );
 };
 
-export default ServicePortfolioCarousel;
+export default ServicePortfolio;

@@ -64,9 +64,10 @@ const Footer = () => {
           <div className="ux-footer-col">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="/about">About Firm</a></li>
+             
               <li><a href="/team">Our Team</a></li>
               <li><a href="/insights">Insights</a></li>
+               <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
 

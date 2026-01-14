@@ -579,11 +579,33 @@
 
 
 /* === Add spacing between carousel cards === */
+/* Desktop spacing */
 .slick-slide {
-  padding: 0 12px;   /* Horizontal space between cards */
+  padding: 0 12px;
   box-sizing: border-box;
 }
 
 .slick-list {
-  margin: 0 -12px;   /* Ensures outer slides align correctly */
+  margin: 0 -12px;
 }
+
+/* Mobile stacked layout */
+/* Mobile: 2 cards per row */
+.svc-mobile-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.svc-mobile-item {
+  width: 100%;
+}
+
+/* Optional: 1 card per row on very small screens */
+@media (max-width: 420px) {
+  .svc-mobile-list {
+    grid-template-columns: 1fr ;
+  }
+}
+
+
