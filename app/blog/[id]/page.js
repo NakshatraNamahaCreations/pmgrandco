@@ -5,6 +5,8 @@ import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
 
+
+
 const API_BASE = "https://api.pmgrandco.com";
 
 /* ✅ REQUIRED: generate all blog routes at BUILD time */
@@ -30,7 +32,8 @@ export async function generateStaticParams() {
 
 /* ✅ STATIC Server Component (export compatible) */
 export default async function BlogDetailPage({ params }) {
-  const blogId = params.id;
+  const { id: blogId } = await params; // ✅ REQUIRED
+
 
   const res = await fetch(`${API_BASE}/api/blogs/id/${blogId}`, {
     cache: "force-cache",
@@ -42,7 +45,7 @@ export default async function BlogDetailPage({ params }) {
 
   if (!res.ok) {
     return (
-      <div style={{ padding: 40 }}>
+      <div style={{ padding: 40, color:"#444" }}>
         <h2>Blog not available</h2>
       </div>
     );

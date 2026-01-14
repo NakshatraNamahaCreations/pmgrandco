@@ -201,6 +201,7 @@
 /* Paragraphs */
 .description p {
   margin-bottom: 20px;
+  color: #444;
 }
 
 /* Headings inside editor */
@@ -273,6 +274,12 @@
   background: #f3f7fc;
 }
 
+.faqAnswer{
+  color: #444;
+  padding: 20px !important;
+  margin-bottom: 0 !important;
+}
+
 /* =========================
    FAQ ITEM CARD
 ========================= */
@@ -330,6 +337,7 @@
   font-size: 15.5px;
   line-height: 1.7;
   color: #444;
+  padding: 20px;
 }
 
 /* =========================

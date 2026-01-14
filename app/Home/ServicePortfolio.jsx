@@ -263,7 +263,7 @@ const ServicePortfolioCarousel = () => {
       {
         breakpoint: 375,
         settings: {
-          slidesToshow: 1
+          slidesToShow: 1
         }
       },
       {
