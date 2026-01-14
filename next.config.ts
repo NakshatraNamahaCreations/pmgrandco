@@ -2,10 +2,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: "export",        // ✅ static export
-  trailingSlash: true,     // ✅ required for static routing
+
+  reactStrictMode: true,
+  trailingSlash: true,
+
   images: {
-    unoptimized: true,     // ✅ required for static export
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.pmgrandco.com",
+        pathname: "/uploads/**",
+      },
+    ],
   },
 };
 
