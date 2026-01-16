@@ -19,9 +19,8 @@
 .drawer-panel {
   position: absolute;
   right: -420px;
-  top: 0;
+  top: 120px;
   width: 380px;
-  height: 100%;
   background: #ffffff;
   padding: 24px 20px;
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);

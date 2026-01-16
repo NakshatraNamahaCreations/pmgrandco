@@ -53,7 +53,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Pramoth P",
-                      "pramoth@example.com"
+                      "pramoth@pmgrandco.com"
                     )
                   }
                 />
@@ -116,7 +116,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Mithuna D V",
-                      "mithuna@example.com"
+                      "mithuna@pmgrandco.com"
                     )
                   }
                 />
@@ -177,7 +177,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Gowshikha T",
-                      "gowshikha@example.com"
+                      "gowshikha@pmgrandco.com"
                     )
                   }
                 />
@@ -240,7 +240,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Rahul R M",
-                      "rahul@example.com"
+                      "rahul@pmgrandco.com"
                     )
                   }
                 />
@@ -302,7 +302,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Gowrinitharshna C",
-                      "gowri@example.com"
+                      "gowri@pmgrandco.com"
                     )
                   }
                 />
@@ -361,7 +361,7 @@ export default function TeamList() {
                     openPopup(
                       "email",
                       "Sri Vaibhav V",
-                      "gowri@example.com"
+                      "vaibhav@pmgrandco.com"
                     )
                   }
                 />
