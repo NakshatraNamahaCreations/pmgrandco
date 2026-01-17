@@ -121,7 +121,7 @@ export default function ContactPage() {
       address:
         "7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402",
       phones: ["+91 97912 35452", "+91 80723 92668"],
-      email: "partner3@email.com",
+      email: "rahul@pmgrandco.com",
       mapLink: "https://maps.app.goo.gl/Cepio2FwnMq7s8Mh9"
     },
     {
@@ -129,7 +129,7 @@ export default function ContactPage() {
       icon: <FaMapLocation />,
       address: "2/249, Midapadi, M.N. Patti Post, Palani – 624618",
       phone: "+91 88386 67049",
-      email: "partner4@email.com",
+      email: "pramoth@pmgrandco.com",
       mapLink: "https://maps.app.goo.gl/vNu13aC87uqzPwps9"
     },
     {
@@ -138,7 +138,7 @@ export default function ContactPage() {
       address:
         "40/16E, Sankar Nagar, Old Eye Care Hospital Road – 636007",
       phone: "+91 73390 49957",
-      email: "partner5@email.com",
+      email: "gowshikha@pmgrandco.com",
       mapLink: "https://maps.app.goo.gl/H2m7MPoZEUE3PHcDA"
     },
     {
@@ -146,7 +146,7 @@ export default function ContactPage() {
       icon: <FaLocationCrosshairs />,
       address: "4/41, CK's Aishwaryam, Palladam Road – 641605",
       phone: "+91 99439 66077",
-      email: "partner6@email.com",
+      email: "gowri@pmgrandco.com",
       mapLink: "https://maps.app.goo.gl/9rkchQJ8n2YqevxN9"
     }
   ].map((loc, i) => (
