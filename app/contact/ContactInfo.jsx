@@ -104,7 +104,9 @@ export default function ContactPage() {
               <FaEnvelope className="sol-react-icon" />
             </div>
             <h3>Email</h3>
-            <p>info@pmgrandco.com, coimbatore@pmgrandco.com</p>
+            <a href="mailto: mithuna@pmgrandco.com" className="mb-2">mithuna@pmgrandco.com</a>
+            <a href="mailto: vaibhav@pmgrandco.com" className="mb-2">vaibhav@pmgrandco.com</a>
+            <a href="mailto: coimbatore@pmgrandco.com">coimbatore@pmgrandco.com</a>
           </article>
         </div>
 
