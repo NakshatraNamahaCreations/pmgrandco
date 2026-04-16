@@ -32,10 +32,10 @@ const Footer = () => {
       <div className="ux-footer-highlight">
         <div className="ux-h-inner">
           <div className="ux-h-item">
-            <MdLocationOn />373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043
+            <MdLocationOn />7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402
           </div>
           <div className="ux-h-item">
-            <FaPhoneAlt /> +91 9344733377
+            <FaPhoneAlt /> +91 97912 35452
           </div>
           <div className="ux-h-item">
             <MdEmail /> info@pmgrandco.com
@@ -53,11 +53,15 @@ const Footer = () => {
               A trusted team of Chartered Accountants providing Audit, Compliance,
               Taxation, and Advisory services with professionalism and clarity.
             </p>
-            <div className="ux-socials">
+            <div className="ux-socials mb-4">
               <a href="#"><FaLinkedinIn /></a>
-              <a href="tel: +91 9344733377"><FaPhoneAlt /></a>
+              <a href="tel: +91 97912 35452"><FaPhoneAlt /></a>
               <a href="mailto: info@pmgrandco.com"><FaEnvelope /></a>
             </div>
+            
+            <p className="fw-bold" style={{fontSize: "18px", textDecoration:"underline"}}>Coimbatore Office</p>
+            <p>749, 3rd Floor, TSJ Complex, Avinashi Road, Near Anna Statue,
+Coimbatore – 641018</p>
           </div>
 
           {/* Column 2 */}

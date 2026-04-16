@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { FaBuilding, FaEnvelope, FaLocationArrow, FaPhoneAlt, FaRegClock, FaUserCog } from "react-icons/fa";
-import { FaLocationCrosshairs, FaLocationDot, FaMapLocation } from "react-icons/fa6";
+import { FaLocationCrosshairs, FaLocationDot, FaLocationPin, FaMapLocation } from "react-icons/fa6";
 import "./Contact.css";
 
 export const metadata = {
@@ -70,13 +70,13 @@ export default function ContactPage() {
               <FaBuilding className="sol-react-icon" />
             </div>
             <h3>Address </h3>
-            <p>Coimbatore<br/>Address: 373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043</p>
+            <p>7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402</p>
           <p className="mapLink">
   <div className="mapSection">
   {/* GOOGLE MAP LINK */}
   <a
  // href="https://www.google.com/maps?q=11.019733989144209,76.95125207486058"
- href="https://maps.app.goo.gl/qgKdo3XkGqdDYAVH9"
+ href="https://maps.app.goo.gl/9qXvAFc3yUfw29wp8"
   target="_blank"
   rel="noopener noreferrer"
   className="mapLink"
@@ -93,10 +93,35 @@ export default function ContactPage() {
 
           <article className="sol-card" data-aos="fade-up">
             <div className="sol-icon">
+              <FaLocationPin className="sol-react-icon" />
+            </div>
+            <h3 className="title">Coimbatore Office</h3>
+            <p>749, 3rd Floor, TSJ Complex, Avinashi Road, Near Anna Statue,
+Coimbatore – 641018</p>
+<p className="mapLink">
+  <div className="mapSection">
+  {/* GOOGLE MAP LINK */}
+  <a
+ // href="https://www.google.com/maps?q=11.019733989144209,76.95125207486058"
+ href="https://maps.app.goo.gl/H4Dgwe9Wg3t8PTo7A"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mapLink"
+>
+  [View on Google Maps]
+</a>
+
+</div>
+
+</p>
+          </article>
+
+          <article className="sol-card" data-aos="fade-up">
+            <div className="sol-icon">
               <FaPhoneAlt className="sol-react-icon" />
             </div>
             <h3 className="title">Phone</h3>
-            <p>+91 9344733377</p>
+            <p>+91 97912 35452</p>
           </article>
 
           <article className="sol-card" data-aos="fade-left">
@@ -104,9 +129,8 @@ export default function ContactPage() {
               <FaEnvelope className="sol-react-icon" />
             </div>
             <h3>Email</h3>
-            <a href="mailto: mithuna@pmgrandco.com" className="mb-2">mithuna@pmgrandco.com</a>
-            <a href="mailto: vaibhav@pmgrandco.com" className="mb-2">vaibhav@pmgrandco.com</a>
-            <a href="mailto: coimbatore@pmgrandco.com">coimbatore@pmgrandco.com</a>
+            <a href="mailto: coimbatore@pmgrandco.com" className="mb-2">coimbatore@pmgrandco.com</a>
+            <a href="mailto: rahul@pmgrandco.com" className="mb-2">rahul@pmgrandco.com</a>
           </article>
         </div>
 
@@ -117,15 +141,15 @@ export default function ContactPage() {
 
  <div className="solutions-cards">
   {[
-    {
-      city: "Sulur",
-      icon: <FaLocationDot />,
-      address:
-        "7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402",
-      phones: ["+91 97912 35452", "+91 80723 92668"],
-      email: "rahul@pmgrandco.com",
-      mapLink: "https://maps.app.goo.gl/Cepio2FwnMq7s8Mh9"
-    },
+    // {
+    //   city: "Sulur",
+    //   icon: <FaLocationDot />,
+    //   address:
+    //     "7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402",
+    //   phones: ["+91 97912 35452", "+91 80723 92668"],
+    //   email: "rahul@pmgrandco.com",
+    //   mapLink: "https://maps.app.goo.gl/Cepio2FwnMq7s8Mh9"
+    // },
     {
       city: "Palani",
       icon: <FaMapLocation />,

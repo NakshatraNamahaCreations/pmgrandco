@@ -93,12 +93,12 @@ const HomePage = () => {
            <Link href="/insights" onClick={closeMenu}>Insights</Link>
         </nav>
 
-        <div className="drawer-socials">
+        {/* <div className="drawer-socials">
           <a href="#"><FaFacebook /></a>
           <a href="#"><FaTwitter /></a>
           <a href="#"><FaInstagram /></a>
           <a href="#"><FaLinkedin /></a>
-        </div>
+        </div> */}
       </aside>
     </>
   );

@@ -242,7 +242,7 @@ const NextArrow = ({ onClick }) => (
   );
 
   return (
-    <section className="svc-section" id="services">
+    <section className="svc-section" id="1">
       <div className="svc-inner">
         <div className="svc-header">
           <p className="svc-kicker">Our Service Portfolio</p>

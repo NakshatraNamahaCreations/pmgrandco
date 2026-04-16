@@ -86,7 +86,7 @@ export default function TeamList() {
         <hr />
 
         {/* ================= MEMBER 2 ================= */}
-        <article className="editorial-row reverse">
+        {/* <article className="editorial-row reverse">
           <aside className="editorial-media">
             <img src="/images/Mithuna.jpg" alt="Mithuna D V" />
             <div className="meta">
@@ -105,7 +105,7 @@ export default function TeamList() {
                   color="#fff"
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    openPopup("phone", "Mithuna D V", "+91 9344733377")
+                    openPopup("phone", "Mithuna D V", "+91 97912 35452")
                   }
                 />
 
@@ -142,9 +142,7 @@ export default function TeamList() {
               <li>Experience across manufacturing, services, NGOs, education & trading</li>
             </ul>
           </div>
-        </article>
-
-        <hr />
+        </article> */}
 
         {/* ================= MEMBER 3 ================= */}
         <article className="editorial-row">
@@ -328,10 +326,10 @@ export default function TeamList() {
             </ul>
           </div>
         </article>
-<hr/>
+
 
             {/* ================= MEMBER 6 ================= */}
-        <article className="editorial-row reverse">
+        {/* <article className="editorial-row reverse">
           <aside className="editorial-media">
             <img src="/images/Vaibhav.JPG" alt="Sri Vaibhav V" />
             <div className="meta">
@@ -350,7 +348,7 @@ export default function TeamList() {
                   color="#fff"
                   style={{ cursor: "pointer" }}
                   onClick={() =>
-                    openPopup("phone", "Sri Vaibhav V", "+91 9344733377")
+                    openPopup("phone", "Sri Vaibhav V", "+91 97912 35452")
                   }
                 />
 
@@ -387,7 +385,7 @@ export default function TeamList() {
               <li>Financial automation & workflow enhancement</li>
             </ul>
           </div>
-        </article>
+        </article> */}
       </div>
 
       {/* ================= POPUP ================= */}
