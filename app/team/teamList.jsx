@@ -145,7 +145,7 @@ export default function TeamList() {
         </article> */}
 
         {/* ================= MEMBER 3 ================= */}
-        <article className="editorial-row">
+        <article className="editorial-row reverse">
           <aside className="editorial-media">
             <img src="/images/Gowshika.jpg" alt="Gowshikha T" />
             <div className="meta">
@@ -208,7 +208,7 @@ export default function TeamList() {
         <hr />
 
         {/* ================= MEMBER 4 ================= */}
-        <article className="editorial-row reverse">
+        <article className="editorial-row">
           <aside className="editorial-media">
             <img src="/images/Rahul3.png" alt="Rahul R M" />
             <div className="meta">
@@ -270,7 +270,7 @@ export default function TeamList() {
         <hr />
 
         {/* ================= MEMBER 5 ================= */}
-        <article className="editorial-row">
+        <article className="editorial-row reverse">
           <aside className="editorial-media">
             <img src="/images/Gowri.jpg" alt="Gowrinitharshna C" />
             <div className="meta">
